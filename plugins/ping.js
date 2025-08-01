@@ -44,9 +44,21 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
                     newsletterJid: '120363354023106228@newsletter',
                     newsletterName: "JawadTechX",
                     serverMessageId: 143
+                    }
+            }
+        }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "PK-XMD VERIFIED",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:PK-XMD;BOT;;;\nFN:PK-XMD\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
-        }, { quoted: mek });
+        } });
 
     } catch (e) {
         console.error("Error in ping command:", e);
