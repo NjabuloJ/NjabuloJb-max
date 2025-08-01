@@ -1,6 +1,6 @@
 {
   "name": "NjabuloJb-max",
-  "description": "Javascript WhatsApp bot made by Jᴀᴡᴀᴅ TᴇᴄʜX",
+  "description": "✆︎Pσɯҽɾҽԃ Ⴆყ NנɐႦυℓσ נႦ",
   "logo": "https://raw.githubusercontent.com/XdTechPro/KHAN-DATA/refs/heads/main/logo/dj.jpg",
   "keywords": ["NjabuloJb-max"],
   "success_url": "/",
@@ -16,7 +16,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "KHAN-MD"
+      "value": "Njabulo Jb"
     }, 
       
     "PREFIX": {
@@ -79,27 +79,27 @@
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*SEEN YOUR STATUS BY KHAN-MD 🖤*"
+      "value": "*nice you status my family 🔥*"
    
      }, 
     
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "Jᴀᴡᴀᴅ TᴇᴄʜX"
+      "value": "NנɐႦυℓσ נႦ"
 }, 
 
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "92310344XXXX"
+      "value": "26777821911"
 
     }, 
 
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "KHAN-MD"
+      "value": "NjabuloJb-max"
 
       }, 
 
@@ -131,7 +131,7 @@
      "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ Jᴀᴡᴀᴅ TᴇᴄʜX*"
+      "value": "> ✆︎Pσɯҽɾҽԃ Ⴆყ NנɐႦυℓσ נႦ"
     },
 
       "DELETE_LINKS": {
