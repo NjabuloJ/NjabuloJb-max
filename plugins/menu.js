@@ -16,17 +16,18 @@ cmd({
             react: { text: '⏳', key: mek.key }
         });
 
-        const menuCaption = `╭━━━〔 *${config.BOT_NAME}* 〕━━━┈⊷
-┃★╭──────────────
-┃★│ 👑 *Owner :* ${config.OWNER_NAME}
-┃★│ 🤖 *Baileys :* Multi Device
-┃★│ 💻 *Type :* NodeJs
-┃★│ 🚀 *Platform :* vercel
-┃★│ ⚙️ *Mode :* [${config.MODE}]
-┃★│ 🔣 *Prefix :* [${config.PREFIX}]
-┃★│ 🏷️ *Version :* 5.0.0 Pro
-┃★╰──────────────
-╰━━━━━━━━━━━━━━━┈⊷
+        const menuCaption = `
+╭─❖ 𓆩 ⚡ 𓆪 ❖─╮
+*(Njabulo Jb max)*
+╰─❖ 𓆩 ⚡ 𓆪 ❖─╯
+*╭─❖*
+*┋🕵️ ʙᴏᴛ ɴᴀᴍᴇ : ${config.OWNER_NAME}*
+*┋📅 ᴅᴀᴛᴇ: [${config.MODE}]*
+*┋⏰ ᴛɪᴍᴇ: [${config.PREFIX}]*
+*┋ Version :* 5.0.0 Pro
+*╰─❖*
+
+
 ╭━━〔 *Menu List* 〕━━┈⊷
 ┃◈╭─────────────·๏
 ┃◈│1️⃣  📥 *Download Menu*
