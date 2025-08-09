@@ -18,8 +18,7 @@ cmd({
     if (!match.quoted) {
       return await client.sendMessage(from, {
         text: "*🍁 Please reply to a view once message!*",
-      contextInfo: {
-                mentionedJid: [m.sender],
+        contextInfo: {
                 forwardingScore: 1000,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
