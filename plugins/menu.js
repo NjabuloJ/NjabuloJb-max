@@ -387,7 +387,7 @@ cmd({
                     await conn.sendMessage(
                         senderID,
                         {
-                            caption: selectedMenu.content,
+                            text: selectedMenu.content,
                             contextInfo: contextInfo
                         },
                         { quoted: receivedMsg }
