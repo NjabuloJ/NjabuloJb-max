@@ -38,11 +38,11 @@ CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️�
 // chose custom react emojis by yourself 
 DELETE_LINKS: process.env.DELETE_LINKS || "true",
 // automatic delete links witho remove member 
-OWNER_NUMBER: process.env.OWNER_NUMBER || "255766263739",
+OWNER_NUMBER: process.env.OWNER_NUMBER || "26777821911",
 // add your bot owner number
-OWNER_NAME: process.env.OWNER_NAME || "ᴄʀɪss ᴠᴇᴠᴏ",
+OWNER_NAME: process.env.OWNER_NAME || "NjabuloJb",
 // add bot owner name
-DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ*",
+DESCRIPTION: process.env.DESCRIPTION || "> ✆︎Pσɯҽɾҽԃ Ⴆყ NנɐႦυℓσ נႦ*",
 // add bot owner name    
 ALIVE_IMG: process.env.ALIVE_IMG || "https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg",
 // add img for alive msg
