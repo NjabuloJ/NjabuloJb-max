@@ -8,39 +8,40 @@ cmd({
     alias: ["status", "online", "a"],
     desc: "Check bot is alive or not",
     category: "main",
-    react: "⚡",
+    react: "🏓",
     filename: __filename
 },
 async (conn, mek, m, { from, sender, reply }) => {
     try {
         const status = `
-╭───〔 *${config.BOT_NAME}* 〕───◉
-│✨ *Bot is Active & Online!*
-│
-│🧠 *Owner:* ${config.OWNER_NAME}
-│⚡ *Version:* 5.0.0 Pro
-│📝 *Prefix:* [${config.PREFIX}]
-│📳 *Mode:* [${config.MODE}]
-│💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-│🖥️ *Host:* ${os.hostname()}
-│⌛ *Uptime:* ${runtime(process.uptime())}
-╰────────────────────◉
-> ${config.DESCRIPTION}`;
+*Uptime:* ${runtime(process.uptime())}`;
 
         await conn.sendMessage(from, {
-            image: { url: config.MENU_IMAGE_URL },
+            image: `{ url: https://files.catbox.moe/84ohd5.jpg}`,
             caption: status,
             contextInfo: {
                 mentionedJid: [m.sender],
                 forwardingScore: 1000,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363417599637828@newsletter',
-                    newsletterName: 'CRISS AI',
+                    newsletterJid: '120363399999197102@newsletter',
+                    newsletterName: '╭••➤®Njabulo Jb',
                     serverMessageId: 143
                 }
             }
-        }, { quoted: mek });
+        }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 
     } catch (e) {
         console.error("Alive Error:", e);
