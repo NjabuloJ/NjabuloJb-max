@@ -16,7 +16,7 @@ cmd({
     }
 
     if (!match.quoted) {
-      return await client.sendMessage(from, {
+      await conn.sendMessage(from, {
         text: "*🍁 Please reply to a view once message!*",
         contextInfo: {
                 forwardingScore: 1000,
