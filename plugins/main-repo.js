@@ -51,7 +51,7 @@ async (conn, mek, m, { from, reply }) => {
             },
             message: {
                 contactMessage: {
-                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    displayName: "✆︎NנɐႦυℓσ נႦ max V1",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
@@ -60,7 +60,7 @@ async (conn, mek, m, { from, reply }) => {
 
         // Send the audio file with context info
         await conn.sendMessage(from, {
-            audio: { url: 'https://github.com/criss-vevo/CRISS-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
+            audio: { url: 'https://files.catbox.moe/v27xgn.mp3' },
             mimetype: 'audio/mp4',
             ptt: true,
             contextInfo: { 
