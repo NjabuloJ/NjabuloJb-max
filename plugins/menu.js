@@ -81,7 +81,19 @@ cmd({
             audio: { url: 'https://github.com/criss-vevo/CRISS-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
             mimetype: 'audio/mp4',
             ptt: true,       
-        }, { quoted: mek });
+        }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 
         const messageID = sentMsg.key.id;
 
@@ -127,27 +139,27 @@ cmd({
                 title: "👥 *Group Menu* 👥",
                 content: `
 ┏──────────────⊷
-│ 🛠️ *Management*
-│ • grouplink
-│ • kickall
-│ • kickall2
-│ • kickall3
-│ • add @user
-│ • remove @user
-│ • kick @user
-│ • promote @user
-│ • demote @user
-│ • dismiss 
-│ • revoke
-│ • mute [time]
-│ • unmute
-│ • lockgc
-│ • unlockgc
-│ • tag @user
-│ • hidetag [msg]
-│ • tagall
-│ • tagadmins
-│ • invite
+│ 🛠️ *ᴍᴀɴᴀɢᴇᴍᴇɴᴛ*
+│ • ɢʀᴏᴜᴘʟɪɴᴋ
+│ • ᴋɪᴄᴋᴀʟʟ
+│ • ᴋɪᴄᴋᴀʟʟ2
+│ • ᴋɪᴄᴋᴀʟʟ3
+│ • ᴀᴅᴅ @ᴜsᴇʀ
+│ • ʀᴇᴍᴏᴠᴇ @ᴜsᴇʀ
+│ • ᴋɪᴄᴋ @ᴜsᴇʀ
+│ • ᴘʀᴏᴍᴏᴛᴇ @ᴜsᴇʀ
+│ • ᴅᴇᴍᴏᴛᴇ @ᴜsᴇʀ
+│ • ᴅɪsᴍɪss 
+│ • ʀᴇᴠᴏᴋᴇ
+│ • ᴍᴜᴛᴇ [ᴛɪᴍᴇ]
+│ • ᴜɴᴍᴜᴛᴇ
+│ • ʟᴏᴄᴋɢᴄ
+│ • ᴜɴʟᴏᴄᴋɢᴄ
+│ • ᴛᴀɢ @ᴜsᴇʀ
+│ • ʜɪᴅᴇᴛᴀɢ [ᴍsɢ]
+│ • ᴛᴀɢᴀʟʟ
+│ • ᴛᴀɢᴀᴅᴍɪɴs
+│ • ɪɴᴠɪᴛᴇ
 ┗──────────────⊷
 
 
