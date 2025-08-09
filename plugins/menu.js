@@ -4,10 +4,10 @@ const os = require("os");
 const { runtime } = require('../lib/functions');
 
 cmd({
-    pattern: "menu3",
+    pattern: "menu",
     desc: "Show interactive menu system",
     category: "menu",
-    react: "🧾",
+    react: "💬",
     filename: __filename
 }, async (conn, mek, m, { from, reply }) => {
     try {
@@ -17,7 +17,7 @@ cmd({
         });
 
         const menuCaption = `
-╭──────────────⊷
+╭━━━━━━━━━━━━━━━━━⊷
 ┊ ┏────────────⊷
 ┊ ┊▢ʙᴏᴛ ɴᴀᴍᴇ :  *ɴᴊᴀʙᴜʟᴏ ᴊʙ*
 ┊  ┊▢ᴘʀᴇғɪx : *[${config.PREFIX}]*
@@ -35,10 +35,10 @@ cmd({
 ┊      ❍[9]• *ʀᴇᴀᴄᴛɪᴏɴs ᴍᴇɴᴜ*
 ┊      ❍[10]• *ᴍᴀɪɴ ᴍᴇɴᴜ*
 ┊     ┗─────────⊷
-╰┬───────⊷⳹
+╰┬━━━━━━━━━━━━⊷⳹
 ┌┴ʀᴇᴘʟʏ ɴᴀᴍᴇ ᴄᴏᴍᴍᴀɴᴅs 1ᴛᴏ10
 ┊╰─────────────⊷
-*╰⊷••ɴנαʙυʟσ ᴊв••──────⊷*
+*╰━━━━━━━━━━━━━━━━━⊷*
 
 > ${config.DESCRIPTION}`;
 
@@ -76,7 +76,7 @@ cmd({
 
         // Send menu audio only once
         await conn.sendMessage(from, {
-            audio: { url: 'https://github.com/criss-vevo/CRISS-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
+            audio: { url: 'https://files.catbox.moe/mflouf.mp3' },
             mimetype: 'audio/mp4',
             ptt: true,       
         }, { quoted: {
