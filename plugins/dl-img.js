@@ -35,14 +35,14 @@ cmd({
         for (const imageUrl of selectedImages) {
             await conn.sendMessage(from,{ 
              image: { url: imageUrl },
-              caption: `📷 Result for: ${query}\n> © Powered by CrissVevo`,
+              caption: `📷 Result for: ${query}\n> ✆︎Pσɯҽɾҽԃ Ⴆყ NנɐႦυℓσ נႦ`,
                 contextInfo: {
                 mentionedJid: [m.sender],
                 forwardingScore: 1000,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363417599637828@newsletter',
-                    newsletterName: 'CRISS AI',
+                    newsletterJid: '120363399999197102@newsletter',
+                    newsletterName: '╭••➤®Njabulo Jb',
                     serverMessageId: 143
                 }
             }
