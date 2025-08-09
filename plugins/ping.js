@@ -32,7 +32,7 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
         const end = new Date().getTime();
         const responseTime = (end - start) / 1000;
 
-        const text = ` *ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴀx ᴠ1 ᴘᴏɴɢ🏓: ${responseTime.toFixed(2)}ms*`;
+        const text = ` *ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴘᴏɴɢ🏓: ${responseTime.toFixed(2)}ms*`;
 
         await conn.sendMessage(from, {
             text,
