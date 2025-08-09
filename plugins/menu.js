@@ -67,7 +67,7 @@ cmd({
             },
             message: {
                 contactMessage: {
-                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    displayName: "NנɐႦυℓσ נႦ-max V1",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
@@ -87,7 +87,7 @@ cmd({
             },
             message: {
                 contactMessage: {
-                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    displayName: "NנɐႦυℓσ נႦ-max V1",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
@@ -415,7 +415,7 @@ cmd({
                              },
                              message: {
                             contactMessage: {
-                             displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                             displayName: "✆︎NנɐႦυℓσ נႦ-max V1",
                           vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
                           }
                          }
