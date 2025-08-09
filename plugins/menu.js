@@ -89,36 +89,34 @@ cmd({
         const menuData = {
             '1': {
                 title: "📥 *Download Menu* 📥",
-                content: `╭━━━〔 *Download Menu* 〕━━━┈⊷
-┃★╭──────────────
-┃★│ 🌐 *Social Media*
-┃★│ • facebook [url]
-┃★│ • mediafire [url]
-┃★│ • tiktok [url]
-┃★│ • twitter [url]
-┃★│ • Insta [url]
-┃★│ • apk [app]
-┃★│ • img [query]
-┃★│ • tt2 [url]
-┃★│ • pins [url]
-┃★│ • apk2 [app]
-┃★│ • fb2 [url]
-┃★│ • pinterest [url]
-┃★╰──────────────
-┃★╭──────────────
-┃★│ 🎵 *Music/Video*
-┃★│ • spotify [query]
-┃★│ • play [song]
-┃★│ • play2-10 [song]
-┃★│ • audio [url]
-┃★│ • video [url]
-┃★│ • video2-10 [url]
-┃★│ • ytmp3 [url]
-┃★│ • ytmp4 [url]
-┃★│ • song [name]
-┃★│ • darama [name]
-┃★╰──────────────
-╰━━━━━━━━━━━━━━━┈⊷
+                content: ` 🎬 *(download)*
+┏──────────────⊷
+│ 🌐 *Social Media*
+│ • facebook [url]
+│ • mediafire [url]
+│ • tiktok [url]
+│ • twitter [url]
+│ • Insta [url]
+│ • apk [app]
+│ • img [query]
+│ • tt2 [url]
+│ • pins [url]
+│ • apk2 [app]
+│ • fb2 [url]
+│ • pinterest [url]
+┊
+│ 🎵 *Music/Video*
+│ • spotify [query]
+│ • play [song]
+│ • play2-10 [song]
+│ • audio [url]
+│ • video [url]
+│ • video2-10 [url]
+│ • ytmp3 [url]
+│ • ytmp4 [url]
+│ • song [name]
+│ • darama [name]
+┗──────────────⊷
 > ${config.DESCRIPTION}`
             },
             '2': {
