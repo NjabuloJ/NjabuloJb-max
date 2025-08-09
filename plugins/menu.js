@@ -17,10 +17,10 @@ cmd({
         });
 
         const menuCaption = `
-╭━━━━━━━━━━━━━━━━━⊷
+╭━━━━━━━━━━━━━━━━⊷
 ┊ ┏────────────⊷
 ┊ ┊▢ʙᴏᴛ ɴᴀᴍᴇ :  *ɴᴊᴀʙᴜʟᴏ ᴊʙ*
-┊  ┊▢ᴘʀᴇғɪx : *[${config.PREFIX}]*
+┊ ┊▢ᴘʀᴇғɪx : *[${config.PREFIX}]*
 ┊ ┊▢ᴍᴏᴅᴇ :  *[${config.MODE}]*
 ┊ ┗────────────⊷
 ┊      ┏─────────⊷
@@ -38,7 +38,7 @@ cmd({
 ╰┬━━━━━━━━━━━━⊷⳹
 ┌┴ʀᴇᴘʟʏ ɴᴀᴍᴇ ᴄᴏᴍᴍᴀɴᴅs 1ᴛᴏ10
 ┊╰─────────────⊷
-*╰━━━━━━━━━━━━━━━━━⊷*
+*╰━━━━━━━━━━━━━━━━⊷*
 
 > ${config.DESCRIPTION}`;
 
@@ -48,7 +48,7 @@ cmd({
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: '120363417599637828@newsletter',
-                newsletterName: config.OWNER_NAME,
+                newsletterName: '╭••➤®Njabulo Jb',
                 serverMessageId: 143
             }
         };
