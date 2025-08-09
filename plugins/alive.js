@@ -17,7 +17,7 @@ async (conn, mek, m, { from, sender, reply }) => {
 *Uptime:* ${runtime(process.uptime())}`;
 
         await conn.sendMessage(from, {
-            image: `{ url: https://files.catbox.moe/84ohd5.jpg}`,
+            image: { url: config.MENU_IMAGE_URL },
             caption: status,
             contextInfo: {
                 mentionedJid: [m.sender],
