@@ -32,7 +32,7 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
         const end = new Date().getTime();
         const responseTime = (end - start) / 1000;
 
-        const text = `> *Njabulo Jb: ${responseTime.toFixed(2)}ms ${reactionEmoji}*`;
+        const text = ` *Njabulo Jb: ${responseTime.toFixed(2)}ms ${reactionEmoji}*`;
 
         await conn.sendMessage(from, {
             text,
@@ -41,8 +41,8 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363417599637828@newsletter',
-                    newsletterName: "CRISS AI",
+                    newsletterJid: '120363399999197102@newsletter',
+                    newsletterName: "╭••➤®Njabulo Jb",
                     serverMessageId: 143
                 }
             }
