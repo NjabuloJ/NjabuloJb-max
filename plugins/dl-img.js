@@ -33,14 +33,20 @@ cmd({
             .slice(0, 5);
 
         for (const imageUrl of selectedImages) {
-            await conn.sendMessage(
-                from,
-                { 
-                    image: { url: imageUrl },
-                    caption: `📷 Result for: ${query}\n> © Powered by CrissVevo`
-                },
-                { quoted: mek }
-            );
+            await conn.sendMessage(from,{ 
+             image: { url: imageUrl },
+              caption: `📷 Result for: ${query}\n> © Powered by CrissVevo`,
+                contextInfo: {
+                mentionedJid: [m.sender],
+                forwardingScore: 1000,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363417599637828@newsletter',
+                    newsletterName: 'CRISS AI',
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
             // Add delay between sends to avoid rate limiting
             await new Promise(resolve => setTimeout(resolve, 1000));
         }
