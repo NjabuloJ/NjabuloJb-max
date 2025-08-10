@@ -26,18 +26,34 @@ cmd({
     }
 
     const yt = data.data;
-    const caption = `╭━━━〔 *YOUTUBE STALKER* 〕━━━⊷\n`
-      + `┃👤 *Username:* ${yt.username}\n`
-      + `┃📊 *Subscribers:* ${yt.subscriber_count}\n`
-      + `┃🎥 *Videos:* ${yt.video_count}\n`
-      + `┃🔗 *Channel Link:* (${yt.channel})\n`
-      + `╰━━━⪼\n\n`
-      + `🔹 *Powered by CRISS AI*`;
+    const caption = `
+╭━━━━━━━━━━━━━━━━⊷
+┊ ┏────────────⊷
+┃【①】 *Username:* ${yt.username}
+┃【②】 *Subscribers:* ${yt.subscriber_count}
+┃【③】 *Videos:* ${yt.video_count}
+┃【④】 *Channel Link:* (${yt.channel})
+  ┗─────────⊷
+┌┤  ✆︎Pσɯҽɾҽԃ Ⴆყ NנɐႦυℓσ נႦ
+┊╰─────────────⊷
+╰━━━━━━━━━━━━━━━━⊷`;
 
     await conn.sendMessage(from, {
       image: { url: yt.avatar },
       caption: caption
-    }, { quoted: m });
+    }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 
   } catch (error) {
     console.error("Error:", error);
