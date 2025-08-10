@@ -20,10 +20,9 @@ cmd({
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
     
     if (!mimeType) {
-await axios.sendMessage(m.chat, {
+await axios.sendMessage(response.data, {
       text: "Please reply to an image, video, or audio file.",
       contextInfo: {
-                    mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
