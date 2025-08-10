@@ -104,7 +104,6 @@ async (conn, mek, m, { from, reply, sender, args }) => {
                 }
             }
         } });
-            }
 
     } catch (e) {
         console.error('Movie command error:', e);
