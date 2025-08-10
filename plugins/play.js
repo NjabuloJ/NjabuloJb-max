@@ -34,7 +34,25 @@ cmd({
 
         const { url, title, image, timestamp, ago, views, author } = data.results[0];
 
-        let info = `hallo`;
+        let info = `
+╭━━━━━━━━━━━━━━━━⊷
+┊ ┏────────────⊷
+┊ ┊▢ᴛɪᴛʟᴇ : *${title || "Unknown"}*
+┊ ┊▢ᴛɪᴍᴇ: * ${timestamp || "Unknown"}*
+┊ ┊▢ ᴠɪᴇᴡs : *${views || "Unknown"}*
+┊ ┗────────────⊷
+┊ ┏─────────⊷
+┊ 【①】• *ᴀᴜᴅɪᴏ*
+┊ 【②】• *ᴅᴏᴄᴜᴍᴇɴᴛ*
+┊ 【③】• *ᴀᴜᴅɪᴏ ᴀɴᴅ ᴅᴏᴄᴜᴍᴇɴᴛ*
+┊ 【④】• *ʟʏʀɪᴄs* 
+┊ ┗─────────⊷
+╰┬━━━━━━━━━━━━⊷⳹
+┌┤ *ʀᴇᴘʟʏ ɴᴜᴍʙᴇʀ ᴄᴏᴍᴍᴀɴᴅs 1ᴛᴏ4*
+┊╰─────────────⊷
+*╰━━━━━━━━━━━━━━━━⊷*
+
+> > *✆︎ᴘσɯҽɾҽԃ Ⴆყ ɴנɐႦυℓσ נႦ*`;
 
         const sentMsg = await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
         const messageID = sentMsg.key.id;
