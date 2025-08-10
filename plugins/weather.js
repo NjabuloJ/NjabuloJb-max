@@ -30,8 +30,11 @@ async (conn, mek, m, { from, q, reply }) => {
 
 > ✆︎Pσɯҽɾҽԃ Ⴆყ NנɐႦυℓσ נႦ
 `;
-        return reply (weather);
-        }, { quoted: {
+    await conn.sendMessage(
+            from,
+    {
+        text: weather,
+            }, { quoted: {
             key: {
                 fromMe: false,
                 participant: `0@s.whatsapp.net`,
