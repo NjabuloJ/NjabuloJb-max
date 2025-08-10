@@ -16,31 +16,30 @@ cmd({
             react: { text: '⏳', key: mek.key }
         });
 
-        const menuCaption = `╭━━━〔 *${config.BOT_NAME}* 〕━━━┈⊷
-┃★╭──────────────
-┃★│ 👑 *Owner :* ${config.OWNER_NAME}
-┃★│ 🤖 *Baileys :* Multi Device
-┃★│ 💻 *Type :* NodeJs
-┃★│ 🚀 *Platform :* vercel
-┃★│ ⚙️ *Mode :* [${config.MODE}]
-┃★│ 🔣 *Prefix :* [${config.PREFIX}]
-┃★│ 🏷️ *Version :* 5.0.0 Pro
-┃★╰──────────────
-╰━━━━━━━━━━━━━━━┈⊷
-╭━━〔 *Menu List* 〕━━┈⊷
-┃◈╭─────────────·๏
-┃◈│1️⃣  📥 *Download Menu*
-┃◈│2️⃣  👥 *Group Menu*
-┃◈│3️⃣  😄 *Fun Menu*
-┃◈│4️⃣  👑 *Owner Menu*
-┃◈│5️⃣  🤖 *AI Menu*
-┃◈│6️⃣  🎎 *Anime Menu*
-┃◈│7️⃣  🔄 *Convert Menu*
-┃◈│8️⃣  📌 *Other Menu*
-┃◈│9️⃣  💞 *Reactions Menu*
-┃◈│🔟  🏠 *Main Menu*
-┃◈╰───────────┈⊷
-╰──────────────┈⊷
+        const menuCaption = `
+╭━━━━━━━━━━━━━━━━⊷
+┊ ┏────────────⊷
+┊ ┊▢ʙᴏᴛ ɴᴀᴍᴇ :  *ɴᴊᴀʙᴜʟᴏ ᴊʙ*
+┊ ┊▢ᴘʀᴇғɪx : * [${config.PREFIX}]*
+┊ ┊▢ᴍᴏᴅᴇ :  *[${config.MODE}]*
+┊ ┗────────────⊷
+┊      ┏─────────⊷
+┊      【①】• *ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴇɴᴜ*
+┊      【②】• *ɢʀᴏᴜᴘ ᴍᴇɴᴜ*
+┊      【③】• *ғᴜɴ ᴍᴇɴᴜ*
+┊      【④】• *ᴏᴡɴᴇʀ ᴍᴇɴᴜ*
+┊      【⑤】• *ᴀɪ ᴍᴇɴᴜ*
+┊      【⑥】• *ᴀɴɪᴍᴇ ᴍᴇɴᴜ*
+┊      【⑦】• *ᴄᴏɴᴠᴇʀᴛ ᴍᴇɴᴜ*
+┊      【⑧】• *ᴏᴛʜᴇʀ ᴍᴇɴᴜ* 
+┊      【⑨】• *ʀᴇᴀᴄᴛɪᴏɴs ᴍᴇɴᴜ*
+┊      【⑩】• *ᴍᴀɪɴ ᴍᴇɴᴜ*
+┊      ┗─────────⊷
+╰┬━━━━━━━━━━━━⊷⳹
+┌┤ *ʀᴇᴘʟʏ ɴᴀᴍᴇ ᴄᴏᴍᴍᴀɴᴅs 1ᴛᴏ10*
+┊╰─────────────⊷
+*╰━━━━━━━━━━━━━━━━⊷*
+
 > ${config.DESCRIPTION}`;
 
         const contextInfo = {
@@ -48,8 +47,8 @@ cmd({
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363417599637828@newsletter',
-                newsletterName: config.OWNER_NAME,
+                newsletterJid: '120363399999197102@newsletter',
+                newsletterName: '╭••➤®Njabulo Jb',
                 serverMessageId: 143
             }
         };
@@ -57,19 +56,41 @@ cmd({
         const sentMsg = await conn.sendMessage(
             from,
             {
-                image: { url: config.MENU_IMAGE_URL || 'https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg' },
+                image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/0ikqoy.jpg' },
                 caption: menuCaption,
                 contextInfo: contextInfo
+          }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
             },
-            { quoted: mek }
-        );
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 
         // Send menu audio only once
         await conn.sendMessage(from, {
-            audio: { url: 'https://github.com/criss-vevo/CRISS-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
+            audio: { url: 'https://files.catbox.moe/33exuv.mp3' },
             mimetype: 'audio/mp4',
             ptt: true,       
-        }, { quoted: mek });
+          }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 
         const messageID = sentMsg.key.id;
 
