@@ -71,8 +71,32 @@ cmd({
 
         // Validate response
         if (!response.data?.success || !response.data.results?.length) {
-            return reply("❌ No images found. Try different keywords");
-        }
+     await conn.sendMessage(m.chat, {
+      text: "❌ No images found. Try different keywords",
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
+     }
 
         const results = response.data.results;
         // Get 5 random images
