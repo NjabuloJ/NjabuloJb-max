@@ -19,7 +19,7 @@ cmd({
     filename: __filename
 }, async (conn, m, mek, { from, q, reply }) => {
     try {
-        if (!q){ 
+        if (!q)
         await conn.sendMessage(m.chat, {
       text: "❌ Please provide a Query or Youtube URL!.",
       contextInfo: {
