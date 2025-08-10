@@ -201,8 +201,8 @@ cmd({
             },
             '4': {
                 title: "👑 *Owner Menu* 👑",
-                content: `╭━━━〔 *Owner Menu* 〕━━━┈⊷
-┃★╭──────────────
+                content: ` 🌐 *(Owner)*
+┏──────────────⊷
 ┃★│ ⚠️ *Restricted*
 ┃★│ • block @user
 ┃★│ • unblock @user
@@ -211,15 +211,11 @@ cmd({
 ┃★│ • restart
 ┃★│ • shutdown
 ┃★│ • updatecmd
-┃★╰──────────────
-┃★╭──────────────
-┃★│ ℹ️ *Info Tools*
 ┃★│ • gjid
 ┃★│ • jid @user
 ┃★│ • listcmd
 ┃★│ • allmenu
-┃★╰──────────────
-╰━━━━━━━━━━━━━━━┈⊷
+┗──────────────⊷
 > ${config.DESCRIPTION}`
             },
             '5': {
@@ -334,38 +330,31 @@ cmd({
             },
             '9': {
                 title: "💞 *Reactions Menu* 💞",
-                content: `╭━━━〔 *Reactions Menu* 〕━━━┈⊷
-┃★╭──────────────
+                content: ` 🌐 *(Reactions)*
+┏──────────────⊷
 ┃★│ ❤️ *Affection*
 ┃★│ • cuddle @user
 ┃★│ • hug @user
 ┃★│ • kiss @user
 ┃★│ • lick @user
 ┃★│ • pat @user
-┃★╰──────────────
-┃★╭──────────────
-┃★│ 😂 *Funny*
 ┃★│ • bully @user
 ┃★│ • bonk @user
 ┃★│ • yeet @user
 ┃★│ • slap @user
 ┃★│ • kill @user
-┃★╰──────────────
-┃★╭──────────────
-┃★│ 😊 *Expressions*
 ┃★│ • blush @user
 ┃★│ • smile @user
 ┃★│ • happy @user
 ┃★│ • wink @user
 ┃★│ • poke @user
-┃★╰──────────────
-╰━━━━━━━━━━━━━━━┈⊷
+┗──────────────⊷
 > ${config.DESCRIPTION}`
             },
             '10': {
                 title: "🏠 *Main Menu* 🏠",
-                content: `╭━━━〔 *Main Menu* 〕━━━┈⊷
-┃★╭──────────────
+                content: ` 🌐 *(Main)*
+┏──────────────⊷
 ┃★│ ℹ️ *Bot Info*
 ┃★│ • ping
 ┃★│ • live
@@ -374,14 +363,10 @@ cmd({
 ┃★│ • uptime
 ┃★│ • repo
 ┃★│ • owner
-┃★╰──────────────
-┃★╭──────────────
-┃★│ 🛠️ *Controls*
 ┃★│ • menu
 ┃★│ • menu2
-┃★│ • restart
-┃★╰──────────────
-╰━━━━━━━━━━━━━━━┈⊷
+┃★│ • restar
+┗──────────────⊷
 > ${config.DESCRIPTION}`
             }
         };
@@ -408,8 +393,7 @@ cmd({
                     await conn.sendMessage(
                         senderID,
                         {
-                            image: { url: config.MENU_IMAGE_URL || 'https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg' },
-                            caption: selectedMenu.content,
+                            text: selectedMenu.content,
                             contextInfo: contextInfo
                         },
                         { quoted: receivedMsg }
@@ -423,7 +407,8 @@ cmd({
                     await conn.sendMessage(
                         senderID,
                         {
-                            text: `❌ *Invalid Option!* ❌\n\nPlease reply with a number between 1-10 to select a menu.\n\n*Example:* Reply with "1" for Download Menu\n\n> ${config.DESCRIPTION}`,
+                           image: { url: config.MENU_IMAGE_URL || 'https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg' },
+                            caption: `❌ *Invalid Option!* ❌\n\nPlease reply with a number between 1-10 to select a menu.\n\n*Example:* Reply with "1" for Download Menu\n\n> ${config.DESCRIPTION}`,
                             contextInfo: contextInfo
                         },
                         { quoted: receivedMsg }
