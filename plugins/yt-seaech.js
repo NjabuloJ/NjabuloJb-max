@@ -31,7 +31,20 @@ var mesaj = '';
 arama.all.map((video) => {
 mesaj += ' *🖲️' + video.title + '*\n🔗 ' + video.url + '\n\n'
 });
-await conn.sendMessage(from , { text:  mesaj }, { quoted: mek } )
+await conn.sendMessage(from , { text:  mesaj
+}, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 } catch (e) {
     l(e)
   reply('*Error !!*')
