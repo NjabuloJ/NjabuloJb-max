@@ -11,10 +11,9 @@ cmd({
   filename: __filename
 }, async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, reply }) => {
   try {
-    const njabulo = "Please provide a search query for Wikipedia.",
     if (!q) {
       await conn.sendMessage(m.chat, {
-        caption: njabulo,
+      text: "Please provide a search query for Wikipedia.",
       contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
