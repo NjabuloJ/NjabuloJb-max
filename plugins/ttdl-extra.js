@@ -33,8 +33,30 @@ async (conn, mek, m, { from, args, quoted, reply }) => {
         const caption = `📖 *Title:* ${titulo}\n👤 *Author:* ${author}\n\n📥 *Reply with:*\n1️⃣ for *Video*\n2️⃣ for *Audio*`;
         const menuMsg = await conn.sendMessage(from, {
             image: { url: thumbanail },
-            caption
-        }, { quoted: mek });
+            caption: "> ✆︎Pσɯҽɾҽԃ Ⴆყ NנɐႦυℓσ נႦ",
+            contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 
         // Wait for the user to reply with the option
         conn.ev.on('messages.upsert', async (msgUpdate) => {
@@ -49,15 +71,59 @@ async (conn, mek, m, { from, args, quoted, reply }) => {
                     // Send video
                     await conn.sendMessage(from, {
                         video: { url: mp4 },
-                        caption: "🎥 *Here is your TikTok video!*"
-                    }, { quoted: mek });
+                        caption: "🎥 *Here is your TikTok video!*",
+                    contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
                 } else if (userReply === '2') {
                     // Send audio
                     await conn.sendMessage(from, {
                         audio: { url: mp3 },
                         mimetype: 'audio/mpeg',
-                        caption: "🎵 *Here is the extracted audio!*"
-                    }, { quoted: mek });
+                        caption: "🎵 *Here is the extracted audio!*",
+                    contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
                 } else {
                     reply("❎ Invalid option. Please reply with `1` for video or `2` for audio.");
                 }
