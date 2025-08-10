@@ -38,7 +38,7 @@ cmd({
 ╭━━━━━━━━━━━━━━━━⊷
 ┊ ┏────────────⊷
 ┊ ┊▢ᴛɪᴛʟᴇ : *${title || "Unknown"}*
-┊ ┊▢ᴛɪᴍᴇ: * ${timestamp || "Unknown"}*
+┊ ┊▢ᴛɪᴍᴇ: *${timestamp || "Unknown"}*
 ┊ ┊▢ ᴠɪᴇᴡs : *${views || "Unknown"}*
 ┊ ┗────────────⊷
 ┊ ┏─────────⊷
@@ -54,7 +54,32 @@ cmd({
 
 > > *✆︎ᴘσɯҽɾҽԃ Ⴆყ ɴנɐႦυℓσ נႦ*`;
 
-        const sentMsg = await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
+        const sentMsg = await conn.sendMessage(from, { 
+            image: { url: image },
+            caption: info,
+            contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
         const messageID = sentMsg.key.id;
         await conn.sendMessage(from, { react: { text: '🎶', key: sentMsg.key } });
 
@@ -74,14 +99,14 @@ cmd({
                 let type;
                 let response;
                 
-                if (userReply === "1.1") {
+                if (userReply === "1") {
                     msg = await conn.sendMessage(from, { text: "⏳ Processing..." }, { quoted: mek });
                     response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
                     let downloadUrl = response?.result?.download?.url;
                     if (!downloadUrl) return await reply("❌ Download link not found!");
                     type = { audio: { url: downloadUrl }, mimetype: "audio/mpeg" };
                     
-                } else if (userReply === "1.2") {
+                } else if (userReply === "2") {
                     msg = await conn.sendMessage(from, { text: "⏳ Processing..." }, { quoted: mek });
                     const response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
                     let downloadUrl = response?.result?.download?.url;
