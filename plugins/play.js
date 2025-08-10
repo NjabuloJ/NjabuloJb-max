@@ -50,13 +50,63 @@ cmd({
 
         if (!id) {
             const searchResults = await dy_scrap.ytsearch(q);
-            if (!searchResults?.results?.length) return await reply("❌ No results found!");
+            if (!searchResults?.results?.length)
+           await conn.sendMessage(m.chat, {
+      text: "❌ No results found!.",
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
+            
             id = searchResults.results[0].videoId;
         }
 
         const data = await dy_scrap.ytsearch(`https://youtube.com/watch?v=${id}`);
-        if (!data?.results?.length) return await reply("❌ Failed to fetch video!");
-
+        if (!data?.results?.length)
+       await conn.sendMessage(m.chat, {
+      text: "❌ Failed to fetch video!.",
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
         const { url, title, image, timestamp, ago, views, author } = data.results[0];
 
         let info = `
@@ -147,7 +197,21 @@ cmd({
                     type = { audio: { url: downloadUrl }, mimetype: "audio/mpeg" };
                     
                 } else if (userReply === "2") {
-                    msg = await conn.sendMessage(from, { text: "⏳ Processing..." }, { quoted: mek });
+                    msg = await conn.sendMessage(from, {
+                        text: "⏳ Processing..."
+                                    }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
                     const response = await dy_scrap.ytmp3(`https://youtube.com/watch?v=${id}`);
                     let downloadUrl = response?.result?.download?.url;
                     if (!downloadUrl) return await reply("❌ Download link not found!");
