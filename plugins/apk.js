@@ -81,14 +81,19 @@ cmd({
     const app = data.datalist.list[0];
     const appSize = (app.size / 1048576).toFixed(2); // Convert bytes to MB
 
-    const caption = `╭━━━〔 *APK Downloader* 〕━━━┈⊷
-┃ 📦 *Name:* ${app.name}
-┃ 🏋 *Size:* ${appSize} MB
-┃ 📦 *Package:* ${app.package}
-┃ 📅 *Updated On:* ${app.updated}
-┃ 👨‍💻 *Developer:* ${app.developer.name}
-╰━━━━━━━━━━━━━━━┈⊷
-> ✆︎Pσɯҽɾҽԃ Ⴆყ NנɐႦυℓσ נႦ`;
+    const caption = `
+
+╭━━━━━━━━━━━━━━━━⊷
+┊ ┏────────────⊷
+┊ ┊▢ *Name:* ${app.name}
+┊ ┊▢ *Size:* ${appSize} MB
+┊ ┊▢ *Package:* ${app.package}
+┊ ┊▢ *Updated On:* ${app.updated}
+┊ ┊▢ *Developer:* ${app.developer.name}
+┊ ┗─────────⊷
+┌┤ *(🌐 Play store Apk)*
+┊╰─────────────⊷
+╰━━━━━━━━━━━━━━━━⊷`;
 
     await conn.sendMessage(from, { react: { text: "⬆️", key: m.key } });
 
