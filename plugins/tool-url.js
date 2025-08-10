@@ -20,7 +20,7 @@ cmd({
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
     
     if (!mimeType) {
-await conn.sendMessage(m.chat, {
+await axios.sendMessage(m.chat, {
       text: "Please reply to an image, video, or audio file.",
       contextInfo: {
                     mentionedJid: [m.sender],
