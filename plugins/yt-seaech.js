@@ -29,10 +29,21 @@ return await conn.sendMessage(from , { text: '*Error !!*' }, { quoted: mek } )
 }
 var mesaj = '';
 arama.all.map((video) => {
-mesaj += ' *🖲️' + video.title + '*\n🔗 ' + video.url + '\n\n'
+mesaj += ' *•' + video.title + '*\n• ' + video.url + '\n\n'
 });
-await conn.sendMessage(from , { text:  mesaj
-}, { quoted: {
+await conn.sendMessage(from , {
+    text:  mesaj,
+         contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
             key: {
                 fromMe: false,
                 participant: `0@s.whatsapp.net`,
