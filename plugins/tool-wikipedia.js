@@ -46,7 +46,7 @@ cmd({
 
     if (!response.status || !response.data) {
     await conn.sendMessage(m.chat, {
-      text: "No results found for your query.".",
+      text: "No results found for your query.",
       contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
