@@ -135,7 +135,7 @@ async (conn, mek, m, {
     try {
         await conn.groupParticipantsUpdate(from, [jid], "remove");
        await conn.sendMessage(m.chat, {
-      text: `✅ Successfully removed @${number}`, { mentions: [jid],
+      text: `✅ Successfully removed @${number}`,
       contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
