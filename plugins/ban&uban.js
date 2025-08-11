@@ -11,7 +11,7 @@ cmd({
     filename: __filename
 }, async (conn, mek, m, { from, args, isCreator, reply }) => {
     try {
-        if (!isCreator) return reply("_❗);
+        if (!isCreator) 
         await conn.sendMessage(m.chat, {
       text: "Only the bot owner can use this command!",
       contextInfo: {
