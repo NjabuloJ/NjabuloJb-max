@@ -17,7 +17,31 @@ async (conn, mek, m, { reply }) => {
         const randomColorHex = "#" + Math.floor(Math.random()*16777215).toString(16);
         const randomColorName = colorNames[Math.floor(Math.random() * colorNames.length)];
 
-        reply(`🎨 *Random Color:* \nName: ${randomColorName}\nCode: ${randomColorHex}`);
+    await conn.sendMessage(m.chat, {
+      text: `🎨 *Random Color:* \nName: ${randomColorName}\nCode: ${randomColorHex}`,
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
     } catch (e) {
         console.error("Error in .randomcolor command:", e);
         reply("❌ An error occurred while generating the random color.");
