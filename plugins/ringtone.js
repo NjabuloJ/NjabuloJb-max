@@ -44,7 +44,7 @@ async (conn, mek, m, { from, reply, args }) => {
 
         if (!data.status || !data.result || data.result.length === 0) {
         await conn.sendMessage(m.chat, {
-      text: "No ringtones found for your query. Please try a different keyword."",
+      text: "No ringtones found for your query. Please try a different keyword.",
       contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
