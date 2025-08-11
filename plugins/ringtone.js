@@ -79,7 +79,6 @@ async (conn, mek, m, { from, reply, args }) => {
                 mimetype: "audio/mpeg",
                 fileName: `${randomRingtone.title}.mp3`,
                   contextInfo: {
-                    mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
