@@ -91,7 +91,31 @@ async (conn, mek, m, { args, reply }) => {
         const encodedText = Buffer.from(textToEncode).toString('base64');
         
         // Send the encoded Base64 text
-        reply(`🔑 *Encoded Base64 Text:* \n${encodedText}`);
+    await conn.sendMessage(m.chat, {
+      text: `🔑 *Encoded Base64 Text:* \n${encodedText}`,
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
     } catch (e) {
         console.error("Error in .base64 command:", e);
         reply("❌ An error occurred while encoding the text into Base64.");
@@ -140,7 +164,31 @@ async (conn, mek, m, { args, reply }) => {
         const decodedText = Buffer.from(base64Text, 'base64').toString('utf-8');
         
         // Send the decoded text
-        reply(`🔓 *Decoded Text:* \n${decodedText}`);
+    await conn.sendMessage(m.chat, {
+      text: `🔓 *Decoded Text:* \n${decodedText}`,
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
     } catch (e) {
         console.error("Error in .unbase64 command:", e);
         reply("❌ An error occurred while decoding the Base64 text.");
@@ -169,7 +217,31 @@ async (conn, mek, m, { reply }) => {
         });
         
         // Send the local time as reply
-        reply(`🕒 Current Local Time in Pakistan: ${localTime}`);
+   await conn.sendMessage(m.chat, {
+      text: `🕒 Current Local Time in Pakistan: ${localTime}`,
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
     } catch (e) {
         console.error("Error in .timenow command:", e);
         reply("❌ An error occurred. Please try again later.");
@@ -196,7 +268,31 @@ async (conn, mek, m, { reply }) => {
         });
         
         // Send the current date as reply
-        reply(`📅 Current Date: ${currentDate}`);
+   await conn.sendMessage(m.chat, {
+      text: `📅 Current Date: ${currentDate}`,
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
     } catch (e) {
         console.error("Error in .date command:", e);
         reply("❌ An error occurred. Please try again later.");
@@ -306,7 +402,31 @@ async (conn, mek, m, { args, reply }) => {
         }
 
         // Reply with the result
-        reply(`✅ Result of "${expression}" is: ${result}`);
+    await conn.sendMessage(m.chat, {
+      text: ` Result of "${expression}" is: ${result}`,
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
     } catch (e) {
         console.error(e);
         reply("❎ An error occurred while processing your request.");
