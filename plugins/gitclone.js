@@ -46,7 +46,7 @@ cmd({
 
   if (!/^(https:\/\/)?github\.com\/.+/.test(args[0])) {
   await conn.sendMessage(m.chat, {
-      text: " Invalid GitHub link. Please provide a valid GitHub repository URL."",
+      text: " Invalid GitHub link. Please provide a valid GitHub repository URL.",
       contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
