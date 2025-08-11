@@ -34,8 +34,33 @@ cmd({
 async (conn, mek, m, { args, reply }) => {
     try {
         // Ensure the user provided some text
-        if (!args.length) return reply("❌ Please provide the text to encode into Base64.");
-
+        if (!args.length) 
+       await conn.sendMessage(m.chat, {
+      text: "Please provide the text to encode into Base64.",
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
+           
         const textToEncode = args.join(" ");
         
         // Encode the text into Base64
@@ -58,8 +83,33 @@ cmd({
 async (conn, mek, m, { args, reply }) => {
     try {
         // Ensure the user provided Base64 text
-        if (!args.length) return reply("❌ Please provide the Base64 encoded text to decode.");
-
+        if (!args.length)
+        await conn.sendMessage(m.chat, {
+      text: "Please provide the Base64 encoded text to decode.",
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
+    
         const base64Text = args.join(" ");
         
         // Decode the Base64 text
@@ -141,14 +191,62 @@ async (conn, mek, m, { args, reply }) => {
     try {
         // Ensure arguments are provided
         if (!args[0]) {
-            return reply("✳️ Use this command like:\n *Example:* .calculate 5+3*2");
+        await conn.sendMessage(m.chat, {
+      text: "Use this command like:\n *Example:* .calculate 5+3*2",
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
         }
 
         const expression = args.join(" ").trim();
 
         // Validate the input to prevent unsafe operations
         if (!/^[0-9+\-*/().\s]+$/.test(expression)) {
-            return reply("❎ Invalid expression. Only numbers and +, -, *, /, ( ) are allowed.");
+        await conn.sendMessage(m.chat, {
+      text: "Invalid expression. Only numbers and +, -, *, /, ( ) are allowed.",
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
         }
 
         // Evaluate the mathematical expression
@@ -156,7 +254,31 @@ async (conn, mek, m, { args, reply }) => {
         try {
             result = eval(expression);
         } catch (e) {
-            return reply("❎ Error in calculation. Please check your expression.");
+        await conn.sendMessage(m.chat, {
+      text: "Error in calculation. Please check your expression.",
+      contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
         }
 
         // Reply with the result
