@@ -13,7 +13,7 @@ cmd({
     try {
         // Show loading reaction
         await conn.sendMessage(from, {
-            react: { text: '⏳', key: mek.key }
+            react: { text: '💬', key: mek.key }
         });
 
         const menuCaption = `
@@ -203,18 +203,18 @@ cmd({
                 title: "👑 *Owner Menu* 👑",
                 content: ` 🌐 *(Owner)*
 ┏──────────────⊷
-┃★│ ⚠️ *Restricted*
-┃★│ • block @user
-┃★│ • unblock @user
-┃★│ • fullpp [img]
-┃★│ • setpp [img]
-┃★│ • restart
-┃★│ • shutdown
-┃★│ • updatecmd
-┃★│ • gjid
-┃★│ • jid @user
-┃★│ • listcmd
-┃★│ • allmenu
+┃ ⚠️ *Restricted*
+┃ • block @user
+┃ • unblock @user
+┃ • fullpp [img]
+┃ • setpp [img]
+┃ • restart
+┃ • shutdown
+┃ • updatecmd
+┃ • gjid
+┃ • jid @user
+┃ • listcmd
+┃ • allmenu
 ┗──────────────⊷
 > ${config.DESCRIPTION}`
             },
@@ -332,22 +332,22 @@ cmd({
                 title: "💞 *Reactions Menu* 💞",
                 content: ` 🌐 *(Reactions)*
 ┏──────────────⊷
-┃★│ ❤️ *Affection*
-┃★│ • cuddle @user
-┃★│ • hug @user
-┃★│ • kiss @user
-┃★│ • lick @user
-┃★│ • pat @user
-┃★│ • bully @user
-┃★│ • bonk @user
-┃★│ • yeet @user
-┃★│ • slap @user
-┃★│ • kill @user
-┃★│ • blush @user
-┃★│ • smile @user
-┃★│ • happy @user
-┃★│ • wink @user
-┃★│ • poke @user
+┃ ❤️ *Affection*
+┃ • cuddle @user
+┃ • hug @user
+┃ • kiss @user
+┃ • lick @user
+┃ • pat @user
+┃ • bully @user
+┃ • bonk @user
+┃ • yeet @user
+┃ • slap @user
+┃ • kill @user
+┃ • blush @user
+┃ • smile @user
+┃ • happy @user
+┃ • wink @user
+┃ • poke @user
 ┗──────────────⊷
 > ${config.DESCRIPTION}`
             },
@@ -355,17 +355,17 @@ cmd({
                 title: "🏠 *Main Menu* 🏠",
                 content: ` 🌐 *(Main)*
 ┏──────────────⊷
-┃★│ ℹ️ *Bot Info*
-┃★│ • ping
-┃★│ • live
-┃★│ • alive
-┃★│ • runtime
-┃★│ • uptime
-┃★│ • repo
-┃★│ • owner
-┃★│ • menu
-┃★│ • menu2
-┃★│ • restar
+┃ ℹ️ *Bot Info*
+┃ • ping
+┃ • live
+┃ • alive
+┃ • runtime
+┃ • uptime
+┃ • repo
+┃ • owner
+┃ • menu
+┃ • menu2
+┃ • restar
 ┗──────────────⊷
 > ${config.DESCRIPTION}`
             }
@@ -384,7 +384,7 @@ cmd({
                 const senderID = receivedMsg.key.remoteJid;
 
                 await conn.sendMessage(senderID, {
-                    react: { text: '⏳', key: receivedMsg.key }
+                    react: { text: '🧾', key: receivedMsg.key }
                 });
 
                 if (menuData[receivedText]) {
@@ -409,7 +409,7 @@ cmd({
                    }
               } });
                     await conn.sendMessage(senderID, {
-                        react: { text: '✅', key: receivedMsg.key }
+                        react: { text: '💬', key: receivedMsg.key }
                     });
 
                 } else {
