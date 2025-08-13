@@ -21,7 +21,7 @@ cmd(
                 ? `${sender} is crying over @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is crying!`
-                : `> © Powered By CrissVevo 🖤`;
+                : `> *✆︎Pσɯҽɾҽԃ Ⴆყ NנɐႦυℓσ נႦ*`;
 
             const apiUrl = "https://api.waifu.pics/sfw/cry";
             let res = await axios.get(apiUrl);
@@ -30,11 +30,34 @@ cmd(
             let gifBuffer = await fetchGif(gifUrl);
             let videoBuffer = await gifToVideo(gifBuffer);
 
-            await conn.sendMessage(
-                mek.chat,
-                { video: videoBuffer, caption: message, gifPlayback: true, mentions: [mek.sender, mentionedUser].filter(Boolean) },
-                { quoted: mek }
-            );
+            await conn.sendMessage( mek.chat,{ 
+                video: videoBuffer,
+                caption: message,
+                gifPlayback: true, 
+                contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363399999197102@newsletter',
+                        newsletterName: '╭••➤®Njabulo Jb',
+                        serverMessageId: 143
+                    }
+               }
+             }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
+        
         } catch (error) {
             console.error("❌ Error in .cry command:", error);
             reply(`❌ *Error in .cry command:*\n\`\`\`${error.message}\`\`\``);
