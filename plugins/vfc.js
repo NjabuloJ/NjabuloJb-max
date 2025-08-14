@@ -100,9 +100,9 @@ await conn.sendMessage(from, {
         await conn.sendMessage(from, {
             document: fs.readFileSync(nmfilect), 
             mimetype: 'text/vcard', 
-            fileName: 'status-save.vcf', 
+            fileName: 'statussave.vcf', 
             caption: `\nDone saving.\nGroup Name: *${cmiggc.subject}*\nContacts: *${cmiggc.participants.length}*`,
-      contextInfo: {
+            contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
