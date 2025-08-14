@@ -87,7 +87,7 @@ await conn.sendMessage(m.chat, {
             },
             message: {
                 contactMessage: {
-                    displayName: "N  verified",
+                    displayName: "N  verified",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
@@ -100,91 +100,3 @@ await conn.sendMessage(m.chat, {
 });
 
 
-cmd({
-  pattern: "tts3",
-  desc: "Convert text to speech with different voices.",
-  category: "fun",
-  react: "ðŸ”Š",
-  filename: __filename
-},
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-  try {
-    // Ensure there is text
-    if (!q) {
- await conn.sendMessage(m.chat, {
-      text: "Please provide text for conversion! Usage: `.tts2 <text>",
-      contextInfo: {
-                    mentionedJid: [m.sender],
-                    forwardingScore: 999,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363399999197102@newsletter',
-                        newsletterName: '••®Njabulo Jb',
-                        serverMessageId: 143
-                    }
-               }
-             }, { quoted: {
-            key: {
-                fromMe: false,
-                participant: `0@s.whatsapp.net`,
-                remoteJid: "status@broadcast"
-            },
-            message: {
-                contactMessage: {
-                    displayName: "N  verified",
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
-                }
-            }
-        } });
-   }
-
-    // Set default language
-    let voiceLanguage = 'en-US'; // Default language is American English
-
-    // Check if user specifies Urdu language
-    if (args[0] === "ur" || args[0] === "urdu") {
-      voiceLanguage = 'ur'; // Set language to Urdu
-    }
-
-    // Generate the URL for the TTS audio
-    const url = googleTTS.getAudioUrl(q, {
-      lang: voiceLanguage,  // Choose language based on input
-      slow: false,  // Normal speed for the speech
-      host: 'https://translate.google.com'
-    });
-
-    // Send the audio message to the user
-    await conn.sendMessage(from, { 
-      audio: { url: url }, 
-      mimetype: 'audio/mpeg', 
-      ptt: true,
-      contextInfo: {
-                    mentionedJid: [m.sender],
-                    forwardingScore: 999,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363399999197102@newsletter',
-                        newsletterName: '••®Njabulo Jb',
-                        serverMessageId: 143
-                    }
-               }
-             }, { quoted: {
-            key: {
-                fromMe: false,
-                participant: `0@s.whatsapp.net`,
-                remoteJid: "status@broadcast"
-            },
-            message: {
-                contactMessage: {
-                    displayName: "N  verified",
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
-                }
-            }
-        } });
- 
-
-  } catch (error) {
-    console.error(error);
-    reply(`Error: ${error.message}`);
-  }
-});
