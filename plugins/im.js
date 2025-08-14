@@ -3,7 +3,7 @@ const axios = require("axios");
 
 cmd({
     pattern: "imgi",
-    alias: ["imagei", "googleimagei", "searchimgi"],
+    alias: ["imagei", "googleimagei", "seiarchimg"],
     react: "🦋",
     desc: "Search and download Google images",
     category: "fun",
@@ -32,28 +32,94 @@ cmd({
             .sort(() => 0.5 - Math.random())
             .slice(0, 5);
 
-        for (const imageUrl of selectedImages) {
-            const buttons = [
-                { buttonId: `img_${query}_next`, buttonText: { displayText: 'Next Image' }, type: 1 },
-                { buttonId: `img_${query}_prev`, buttonText: { displayText: 'Previous Image' }, type: 1 },
-                { buttonId: `img_${query}_more`, buttonText: { displayText: 'More Images' }, type: 1 }
+        let currentImage = 0;
+
+        const sendImage = async () => {
+            const imageUrl = selectedImages[currentImage];
+            let buttons = [
+                {
+                    "buttonId": "prev_image",
+                    "buttonText": {
+                        "displayText": "Previous"
+                    },
+                    "type": 1
+                },
+                {
+                    "buttonId": "next_image",
+                    "buttonText": {
+                        "displayText": "Next"
+                    },
+                    "type": 1
+                },
+                {
+                    "buttonId": "more_images",
+                    "buttonText": {
+                        "displayText": "More Images"
+                    },
+                    "type": 1
+                }
             ];
 
-            const buttonMessage = {
+            let buttonMessage = {
                 image: { url: imageUrl },
-                caption: `📷 Result for: ${query}\n> Powered by ʜᴜɴᴛᴇʀ xᴍᴅ`,
+                caption: `📷 Result for: ${query} (${currentImage + 1}/${selectedImages.length})\n> Powered by ʜᴜɴᴛᴇʀ xᴍᴅ`,
                 footer: 'Image Search',
                 buttons: buttons,
                 headerType: 4
             };
 
             await conn.sendMessage(from, buttonMessage, { quoted: mek });
-            // Add delay between sends to avoid rate limiting
-            await new Promise(resolve => setTimeout(resolve, 1000));
-        }
+        };
 
+        await sendImage();
+
+        // Store the image data for button clicks
+        conn.imageData = conn.imageData || {};
+        conn.imageData[from] = {
+            query,
+            selectedImages,
+            currentImage,
+            sendImage
+        };
     } catch (error) {
         console.error('Image Search Error:', error);
         reply(`❌ Error: ${error.message || "Failed to fetch images"}`);
+    }
+});
+
+// Handle button clicks
+cmd({
+    pattern: "(prev_image|next_image|more_images)",
+    alias: [],
+    react: "",
+    desc: "Handle image search button clicks",
+    category: "fun",
+    filename: __filename
+}, async (conn, mek, m, { reply, args, from, command }) => {
+    if (!conn.imageData || !conn.imageData[from]) return;
+
+    const { query, selectedImages, currentImage, sendImage } = conn.imageData[from];
+
+    switch (command) {
+        case "prev_image":
+            if (currentImage > 0) {
+                conn.imageData[from].currentImage--;
+                await sendImage();
+            } else {
+                reply("You're already at the first image.");
+            }
+            break;
+        case "next_image":
+            if (currentImage < selectedImages.length - 1) {
+                conn.imageData[from].currentImage++;
+                await sendImage();
+            } else {
+                reply("You're already at the last image.");
+            }
+            break;
+        case "more_images":
+            // Logic for more images
+            reply("More images button clicked!");
+            break;
     }
 });
