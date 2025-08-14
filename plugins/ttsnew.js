@@ -5,7 +5,7 @@ cmd({
   pattern: "tts2",
   desc: "Convert text to speech with different voices.",
   category: "fun",
-  react: "ðŸ”Š",
+  react: "Ã°Å¸â€Å ",
   filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -20,7 +20,7 @@ await conn.sendMessage(m.chat, {
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363399999197102@newsletter',
-                        newsletterName: '••®Njabulo Jb',
+                        newsletterName: 'â€¢â€¢Â®Njabulo Jb',
                         serverMessageId: 143
                     }
                }
@@ -75,7 +75,7 @@ await conn.sendMessage(m.chat, {
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363399999197102@newsletter',
-                        newsletterName: '••®Njabulo Jb',
+                        newsletterName: 'â€¢â€¢Â®Njabulo Jb',
                         serverMessageId: 143
                     }
                }
@@ -104,7 +104,7 @@ cmd({
   pattern: "tts3",
   desc: "Convert text to speech with different voices.",
   category: "fun",
-  react: "ðŸ”Š",
+  react: "Ã°Å¸â€Å ",
   filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -119,7 +119,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363399999197102@newsletter',
-                        newsletterName: '••®Njabulo Jb',
+                        newsletterName: 'â€¢â€¢Â®Njabulo Jb',
                         serverMessageId: 143
                     }
                }
@@ -158,15 +158,13 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
       audio: { url: url }, 
       mimetype: 'audio/mpeg', 
       ptt: true,
-await conn.sendMessage(m.chat, {
-      text: weather,
       contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363399999197102@newsletter',
-                        newsletterName: '••®Njabulo Jb',
+                        newsletterName: 'â€¢â€¢Â®Njabulo Jb',
                         serverMessageId: 143
                     }
                }
