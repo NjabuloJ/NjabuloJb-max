@@ -2,7 +2,6 @@ const { cmd } = require("../command");
 const axios = require("axios");
 const config = require('../config');
 const pkg from "@whiskeysockets/baileys";
-const { generateWAMessageFromContent, proto } = pkg;
 
 cmd({
     pattern: "imgi",
