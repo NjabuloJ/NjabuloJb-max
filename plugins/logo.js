@@ -30,8 +30,7 @@ cmd({
 
         // Send the 3D Comic-style text effect image
         await conn.sendMessage(from, {
-            image: {
-                url: result.result.download_url,
+            image: result.result.download_url,
              contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
