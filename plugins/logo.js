@@ -30,8 +30,7 @@ cmd({
 
         // Send the 3D Comic-style text effect image
         await conn.sendMessage(from, {
-            image: {
-                url: result.result.download_url,
+            image: {url: result.result.download_url},
              contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
@@ -51,8 +50,7 @@ cmd({
             message: {
                 contactMessage: {
                     displayName: "✆︎NנɐႦυℓσ נႦ verified",
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
-                }
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`               
 
             }
         });
