@@ -39,7 +39,8 @@ async (conn, mek, m, { from, reply, sender, args }) => {
                 }
             }
         } });
-  }await conn.sendMessage(m.chat, {
+       }
+        await conn.sendMessage(m.chat, {
       text: "No results found for your query.",
       contextInfo: {
                     mentionedJid: [m.sender],
