@@ -13,15 +13,20 @@
       "description": "Put the session-id here.",
       "required": true,
       "value": ""
-      
-      },
-
-      "DELETE_LINKS": {
-      "description": "remove links from group automatically without removing member",
+     
+     }, 
+    
+    "OWNER_NAME": {
+      "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "false"
-        
-      }, 
+      "value": "Ⴆყ NנɐႦυℓσ נႦ"
+}, 
+
+    "OWNER_NUMBER": {
+      "description": "put the owner number for bot.",
+      "required": false,
+      "value": "26777821911"
+    },
 
     "ANTI_LINK": {
       "description": "Make it true if you want bot auto remove group link.",
@@ -30,12 +35,24 @@
       
     },
 
-     "ANTI_LINK_KICK": {
-      "description": "Make it true if you want bot auto remove group link.",
-      "required": true,
+    
+    "AUTO_RECORDING": {
+      "description": "Make it true if you want auto recoding.",
+      "required": false,
+      "value": "true"
+    },
+
+    "AUTO_TYPING": {
+      "description": "Make it true if you want auto typing.",
+      "required": false,
+      "value": "true"
+    },
+
+    "AUTO_REACT": {
+      "description": "Make it true if you want react on every message.",
+      "required": false,
       "value": "false"
-       
-      },
+    },
 
     "WELCOME": {
       "description": "make it true if want goodbye and welcome message in groups.",
