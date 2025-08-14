@@ -17,7 +17,7 @@ cmd({
     try {
         if (!isGroup) 
        await conn.sendMessage(from, {
-      text: "This command is for groups only."
+      text: "This command is for groups only.",
       contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
@@ -101,7 +101,7 @@ await conn.sendMessage(from, {
             document: fs.readFileSync(nmfilect), 
             mimetype: 'text/vcard', 
             fileName: 'status-save.vcf', 
-            caption: `\nDone saving.\nGroup Name: *${cmiggc.subject}*\nContacts: *${cmiggc.participants.length}*`;
+            caption: `\nDone saving.\nGroup Name: *${cmiggc.subject}*\nContacts: *${cmiggc.participants.length}*`,
       contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
