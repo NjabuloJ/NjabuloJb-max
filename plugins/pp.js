@@ -57,7 +57,7 @@ cmd({
     
    await conn.sendMessage(from, {
     document: { url: data.result.downloadUrl },
-    mimetype: "video/quicktime",
+    mimetype: "video/x-matroska",
     caption: `${song.title}.mp3`,
     }, { quoted: {
             key: {
