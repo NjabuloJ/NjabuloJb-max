@@ -80,6 +80,23 @@ cmd({
         }
     }
 }, { quoted: mek });
+    await conn.sendMessage(from, {
+    document: { url: data.result.downloadUrl },
+    fileName: `${song.title}.mp3`,
+    mimetype: "audio/mpeg",
+        contextInfo: {
+        externalAdReply: {
+            title: song.title.length > 25 ? `${song.title.substring(0, 22)}...` : song.title,
+            body: "Follow our WhatsApp Channel",
+            mediaType: 1,
+            thumbnailUrl: song.thumbnail.replace('default.jpg', 'hqdefault.jpg'),
+            sourceUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
+            mediaUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
+            showAdAttribution: true,
+            renderLargerThumbnail: true
+        }
+    }
+}, { quoted: mek });       
 
     } catch (error) {
         console.error(error);
