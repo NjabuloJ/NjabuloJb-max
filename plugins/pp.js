@@ -57,7 +57,7 @@ cmd({
         } });
     
    await conn.sendMessage(from, {
-    document: { url: data.result.downloadUrl },
+    video: { url: data.result.downloadUrl },
     mimetype: "video/x-matroska",
     }, { quoted: {
             key: {
