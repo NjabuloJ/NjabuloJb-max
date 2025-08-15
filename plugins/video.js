@@ -29,10 +29,10 @@ cmd({
         let info = `
 ╭━━━━━━━━━━━━━━━━⊷
 ┊ ┏────────────⊷
-┊ ┊ 🎧ᴛɪᴛʟᴇ : *${song.title}.mp3*
+┊ ┊ 🎬ᴛɪᴛʟᴇ : *${song.title}.mp3*
 ┊ ┗────────────⊷
 ╰┬━━━━━━━━━━━━⊷⳹
-┌┤ *📥ᴀᴜᴛᴏ sᴇɴᴅ ᴀᴜᴅɪᴏ ᴀɴᴅ ᴅᴏᴄᴜᴍᴇɴᴛ sᴏɴɢ*
+┌┤ *📥(ᴀᴜᴛᴏᴍᴀᴛɪᴄ sᴇɴᴅ ᴠɪᴅᴇᴏ)*
 ┊╰─────────────⊷
 *╰━━━━━━━━━━━━━━━━⊷*`;
 
@@ -66,7 +66,24 @@ cmd({
       await conn.sendMessage(from, {
     video: { url: data.result.downloadUrl },
     mimetype: "video/mp4",
-    fileName: `${song.title}.mp3`,
+    caption: `${song.title}.mp3`,
+    }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
+   await conn.sendMessage(from, {
+    document: { url: data.result.downloadUrl },
+    mimetype: "video/mp4",
+    caption: `${song.title}.mp3`,
     }, { quoted: {
             key: {
                 fromMe: false,
