@@ -4,8 +4,8 @@ const { ytsearch } = require('@dark-yasiya/yt-dl.js');
 
 
 cmd({ 
-    pattern: "movie", 
-    alias: ["mp4v", "videompv"], 
+    pattern: "uzalo", 
+    alias: ["imbewu", "msasidrama"], 
     react: "🎶", 
     desc: "Download YouTube song", 
     category: "main", 
@@ -26,7 +26,8 @@ cmd({
 
         if (!data?.result?.downloadUrl) return reply("Download failed. Try again later.");
             
-        let info = ` *(loading movie)*`;
+        let info = ` *(loading movie)*
+        Name: ${song.title}.mp3`;
 
         await conn.sendMessage(from, { 
             image: { url: song.thumbnail.replace('default.jpg', 'hqdefault.jpg')},
@@ -58,7 +59,6 @@ cmd({
    await conn.sendMessage(from, {
     document: { url: data.result.downloadUrl },
     mimetype: "video/x-matroska",
-    caption: `${song.title}.mp3`,
     }, { quoted: {
             key: {
                 fromMe: false,
