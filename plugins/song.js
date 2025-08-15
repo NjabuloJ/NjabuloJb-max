@@ -15,13 +15,9 @@ cmd({
     try {
         if (!q) return reply("Please provide a song name or YouTube link.");
 
+        const yt = await ytsearch(q);
+        if (!yt.results.length) return reply("No results found!");
         
-        if (!id) {
-            const searchResults = await dy_scrap.ytsearch(q);
-            if (!searchResults?.results?.length) return await reply("❌ No results found!");
-            id = searchResults.results[0].videoId;
-        }
-
         const song = yt.results[0];
         const apiUrl = `https://apis.davidcyriltech.my.id/youtube/mp3?url=${encodeURIComponent(song.url)}`;
         
@@ -29,21 +25,14 @@ cmd({
         const data = await res.json();
 
         if (!data?.result?.downloadUrl) return reply("Download failed. Try again later.");
-            const { url, title, image, timestamp, ago, views, author } = data.results[0];
+            
+        let info = `🍄 *𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁* 🍄
+        *Title:* ${song.title}.mp3`;
 
-        let info = `🍄 *𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁* 🍄\n\n` +
-            `🎵 *Title:* ${title || "Unknown"}\n` +
-            `⏳ *Duration:* ${timestamp || "Unknown"}\n` +
-            `👀 *Views:* ${views || "Unknown"}\n` +
-            `🌏 *Release Ago:* ${ago || "Unknown"}\n` +
-            `👤 *Author:* ${author?.name || "Unknown"}\n` +
-            `🖇 *Url:* ${url || "Unknown"}\n\n` +
-            `🔽 *Reply with your choice:*\n` +
-            `1.1 *Audio Type* 🎵\n` +
-            `1.2 *Document Type* 📁\n\n` +
-            `${config.FOOTER || "𓆩CRISS AI𓆪"}`;
-
-        await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
+        await conn.sendMessage(from, { 
+            image: { url: song.thumbnail.replace('default.jpg', 'hqdefault.jpg')},
+            caption: info
+           }, { quoted: mek });
     
       await conn.sendMessage(from, {
     audio: { url: data.result.downloadUrl },
