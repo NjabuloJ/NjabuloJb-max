@@ -4,7 +4,7 @@ const { ytsearch } = require('@dark-yasiya/yt-dl.js');
 
 
 cmd({ 
-    pattern: "videoh", 
+    pattern: "movie", 
     alias: ["mp4hv", "videomp4h"], 
     react: "🎶", 
     desc: "Download YouTube song", 
@@ -64,7 +64,8 @@ cmd({
         } });
     
       await conn.sendMessage(from, {
-    image: { url: data.result.downloadUrl },
+    document: { url: data.result.downloadUrl },
+    mimetype: "movie/mp4",
     caption: `${song.title}.mp3`,
     }, { quoted: {
             key: {
