@@ -15,8 +15,12 @@ cmd({
     try {
         if (!q) return reply("Please provide a song name or YouTube link.");
 
-        const yt = await ytsearch(q);
-        if (!yt.results.length) return reply("No results found!");
+        
+        if (!id) {
+            const searchResults = await dy_scrap.ytsearch(q);
+            if (!searchResults?.results?.length) return await reply("❌ No results found!");
+            id = searchResults.results[0].videoId;
+        }
 
         const song = yt.results[0];
         const apiUrl = `https://apis.davidcyriltech.my.id/youtube/mp3?url=${encodeURIComponent(song.url)}`;
