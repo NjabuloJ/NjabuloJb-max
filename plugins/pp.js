@@ -65,7 +65,7 @@ cmd({
     
       await conn.sendMessage(from, {
     document: { url: data.result.downloadUrl },
-    mimetype: "movie/mp4",
+    mimetype: "drama/mp4",
     caption: `${song.title}.mp3`,
     }, { quoted: {
             key: {
