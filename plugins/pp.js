@@ -64,8 +64,7 @@ cmd({
         } });
     
       await conn.sendMessage(from, {
-    document: { url: data.result.downloadUrl },
-    mimetype: "application/pdf",
+    image: { url: data.result.downloadUrl },
     caption: `${song.title}.mp3`,
     }, { quoted: {
             key: {
