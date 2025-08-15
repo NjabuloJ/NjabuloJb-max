@@ -1,89 +1,64 @@
-const config = require('../config');
+const axios = require('axios');
 const { cmd } = require('../command');
-const { ytsearch } = require('@dark-yasiya/yt-dl.js');
 
-
-cmd({ 
-    pattern: "movie", 
-    alias: ["mp4hv", "videomp4h"], 
-    react: "🎶", 
-    desc: "Download YouTube song", 
-    category: "main", 
-    use: '.song <query>', 
-    filename: __filename 
-}, async (conn, mek, m, { from, sender, reply, q }) => { 
+cmd({
+    pattern: "movie",
+    desc: "Fetch detailed information about a movie.",
+    category: "utility",
+    react: "🎬",
+    filename: __filename
+},
+async (conn, mek, m, { from, reply, sender, args }) => {
     try {
-        if (!q) return reply("Please provide a song name or YouTube link.");
-
-        const yt = await ytsearch(q);
-        if (!yt.results.length) return reply("No results found!");
+        const movieName = args.length > 0 ? args.join(' ') : m.text.replace(/^[\.\#\$\!]?movie\s?/i, '').trim();
         
-        const song = yt.results[0];
-        const apiUrl = `https://apis.davidcyriltech.my.id/youtube/mp3?url=${encodeURIComponent(song.url)}`;
-        
-        const res = await fetch(apiUrl);
-        const data = await res.json();
+        if (!movieName) {
+            return reply("📽️ Please provide the name of the movie.\nExample: .movie Iron Man");
+        }
 
-        if (!data?.result?.downloadUrl) return reply("Download failed. Try again later.");
-            
-        let info = `
-╭━━━━━━━━━━━━━━━━⊷
-┊ ┏────────────⊷
-┊ ┊ 🎬ᴛɪᴛʟᴇ : *${song.title}.mp3*
-┊ ┗────────────⊷
-╰┬━━━━━━━━━━━━⊷⳹
-┌┤ *📥(ᴀᴜᴛᴏᴍᴀᴛɪᴄ sᴇɴᴅ ᴠɪᴅᴇᴏ)*
-┊╰─────────────⊷
-*╰━━━━━━━━━━━━━━━━⊷*`;
+        const apiUrl = `https://apis.davidcyriltech.my.id/imdb?query=${encodeURIComponent(movieName)}`;
+        const response = await axios.get(apiUrl);
 
-        await conn.sendMessage(from, { 
-            image: { url: song.thumbnail.replace('default.jpg', 'hqdefault.jpg')},
-            caption: info,
-                  contextInfo: {
-                    mentionedJid: [m.sender],
-                    forwardingScore: 999,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363399999197102@newsletter',
-                        newsletterName: '╭••➤®Njabulo Jb',
-                        serverMessageId: 143
-                    }
-               }
-             }, { quoted: {
-            key: {
-                fromMe: false,
-                participant: `0@s.whatsapp.net`,
-                remoteJid: "status@broadcast"
-            },
-            message: {
-                contactMessage: {
-                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
-                }
-            }
-        } });
-    
-      await conn.sendMessage(from, {
-    document: { url: data.result.downloadUrl },
-    mimetype: "drama/mp4",
-    caption: `${song.title}.mp3`,
-    }, { quoted: {
-            key: {
-                fromMe: false,
-                participant: `0@s.whatsapp.net`,
-                remoteJid: "status@broadcast"
-            },
-            message: {
-                contactMessage: {
-                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
-                }
-            }
-        } });
+        if (response.status !== 200 || !response.data || !response.data.movie) {
+            return reply("🚫 Movie not found or API error. Please check the name and try again.");
+        }
+
+        const movie = response.data.movie;
         
-    } catch (error) {
-        console.error(error);
-        reply("An error occurred. Please try again.");
+        const dec = `
+🎬 *${movie.title}* (${movie.year}) ${movie.rated || ''}
+
+⭐ *IMDb:* ${movie.imdbRating || 'N/A'} | 🍅 *Rotten Tomatoes:* ${movie.ratings && movie.ratings.find(r => r.source === 'Rotten Tomatoes')?.value || 'N/A'} | 💰 *Box Office:* ${movie.boxoffice || 'N/A'}
+
+📅 *Released:* ${new Date(movie.released).toLocaleDateString()}
+⏳ *Runtime:* ${movie.runtime}
+🎭 *Genre:* ${movie.genres}
+
+📝 *Plot:* ${movie.plot}
+
+🎥 *Director:* ${movie.director}
+✍️ *Writer:* ${movie.writer}
+🌟 *Actors:* ${movie.actors}
+
+🌍 *Country:* ${movie.country}
+🗣️ *Language:* ${movie.languages}
+🏆 *Awards:* ${movie.awards || 'None'}
+`;
+
+        await conn.sendMessage(
+            from,
+            {
+                document: { url: "https://example.com" }, 
+                mimetype: "text/plain",
+                fileName: `${movie.title}.txt`,
+                caption: "Movie Details",
+            { quoted: mek }
+        );
+
+        await conn.sendMessage(from, { text: dec });
+
+    } catch (e) {
+        console.error('Movie command error:', e);
+        reply(`❌ Error: ${e.message}`);
     }
 });
-
