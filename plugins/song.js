@@ -29,10 +29,10 @@ cmd({
         let info = `
 ╭━━━━━━━━━━━━━━━━⊷
 ┊ ┏────────────⊷
-┊ ┊▢ᴛɪᴛʟᴇ : *${song.title}.mp3*
+┊ ┊ 🎧ᴛɪᴛʟᴇ : *${song.title}.mp3*
 ┊ ┗────────────⊷
 ╰┬━━━━━━━━━━━━⊷⳹
-┌┤ *ʀᴇᴘʟʏ ɴᴜᴍʙᴇʀ ᴄᴏᴍᴍᴀɴᴅs 1ᴛᴏ4*
+┌┤ *📥ᴀᴜᴛᴏ sᴇɴᴅ ᴀᴜᴅɪᴏ ᴀɴᴅ ᴅᴏᴄᴜᴍᴇɴᴛ sᴏɴɢ*
 ┊╰─────────────⊷
 *╰━━━━━━━━━━━━━━━━⊷*`;
 
@@ -79,7 +79,20 @@ cmd({
             renderLargerThumbnail: true
         }
     }
-}, { quoted: mek });
+}, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
+    
     await conn.sendMessage(from, {
     document: { url: data.result.downloadUrl },
     fileName: `${song.title}.mp3`,
@@ -96,7 +109,20 @@ cmd({
             renderLargerThumbnail: true
         }
     }
-}, { quoted: mek });       
+}, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
+        
 
     } catch (error) {
         console.error(error);
