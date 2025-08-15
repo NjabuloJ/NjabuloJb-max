@@ -5,7 +5,7 @@ const { ytsearch } = require('@dark-yasiya/yt-dl.js');
 
 cmd({ 
     pattern: "video", 
-    alias: ["mp4", "videomp4"], 
+    alias: ["mp4v", "videomp4"], 
     react: "🎶", 
     desc: "Download YouTube song", 
     category: "main", 
@@ -67,19 +67,7 @@ cmd({
     video: { url: data.result.downloadUrl },
     mimetype: "video/mp4",
     fileName: `${song.title}.mp3`,
-    contextInfo: {
-        externalAdReply: {
-            title: song.title.length > 25 ? `${song.title.substring(0, 22)}...` : song.title,
-            body: "Follow our WhatsApp Channel",
-            mediaType: 1,
-            thumbnailUrl: song.thumbnail.replace('default.jpg', 'hqdefault.jpg'),
-            sourceUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
-            mediaUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
-            showAdAttribution: true,
-            renderLargerThumbnail: true
-        }
-    }
-}, { quoted: {
+    }, { quoted: {
             key: {
                 fromMe: false,
                 participant: `0@s.whatsapp.net`,
