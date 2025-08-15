@@ -25,7 +25,21 @@ cmd({
         const data = await res.json();
 
         if (!data?.result?.downloadUrl) return reply("Download failed. Try again later.");
-        await reply("⏳ Downloading audio...");
+            const { url, title, image, timestamp, ago, views, author } = data.results[0];
+
+        let info = `🍄 *𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁* 🍄\n\n` +
+            `🎵 *Title:* ${title || "Unknown"}\n` +
+            `⏳ *Duration:* ${timestamp || "Unknown"}\n` +
+            `👀 *Views:* ${views || "Unknown"}\n` +
+            `🌏 *Release Ago:* ${ago || "Unknown"}\n` +
+            `👤 *Author:* ${author?.name || "Unknown"}\n` +
+            `🖇 *Url:* ${url || "Unknown"}\n\n` +
+            `🔽 *Reply with your choice:*\n` +
+            `1.1 *Audio Type* 🎵\n` +
+            `1.2 *Document Type* 📁\n\n` +
+            `${config.FOOTER || "𓆩CRISS AI𓆪"}`;
+
+        await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
     
       await conn.sendMessage(from, {
     audio: { url: data.result.downloadUrl },
