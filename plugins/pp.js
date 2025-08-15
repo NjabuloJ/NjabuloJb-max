@@ -52,6 +52,17 @@ async (conn, mek, m, { from, reply, sender, args }) => {
                 mimetype: "text/plain",
                 fileName: `${movie.title}.txt`,
                 caption: "Movie Details",
+                contextInfo: {
+                    mentionedJid: [sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363417599637828@newsletter',
+                        newsletterName: 'CRISS AI',
+                        serverMessageId: 143
+                    }
+                }
+            },
             { quoted: mek }
         );
 
