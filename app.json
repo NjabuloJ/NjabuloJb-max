@@ -39,7 +39,7 @@
     "AUTO_RECORDING": {
       "description": "Make it true if you want auto recoding.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
 
     "AUTO_TYPING": {
