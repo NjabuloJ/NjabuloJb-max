@@ -35,13 +35,6 @@
       
     },
 
-    
-    "AUTO_RECORDING": {
-      "description": "Make it true if you want auto recoding.",
-      "required": false,
-      "value": "false"
-    },
-
     "AUTO_TYPING": {
       "description": "Make it true if you want auto typing.",
       "required": false,
@@ -56,7 +49,7 @@
 
     "WELCOME": {
       "description": "make it true if want goodbye and welcome message in groups.",
-      "required": true,
+      "required": false,
       "value": "true"
    }, 
 
