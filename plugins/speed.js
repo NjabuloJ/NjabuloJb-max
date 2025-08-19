@@ -11,7 +11,13 @@ cmd({
 },
 async (conn, mek, m, { from, quoted, sender, reply, }) => {
     try {
-        const start = new Date().getTime();
+        
+  const getGreeting = () => {
+      const start = new Date().getTime();
+      if (start >= 5 && h < 12) return "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 🌅";
+      if (start >= 12 && h < 18) return "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌞";
+      return "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌚";
+    };
 
         const reactionEmojis = ['🔥', '⚡', '🚀', '💨', '🎯', '🎉', '🌟', '💥', '🕐', '🔹'];
         const textEmojis = ['💎', '🏆', '⚡️', '🚀', '🎶', '🌠', '🌀', '🔱', '🛡️', '✨'];
@@ -46,8 +52,8 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
                 forwardingScore: 999,
                 externalAdReply: {
                     title: "vw golf",
-                    body: "Command List",
-                    thumbnailUrl: "https://files.catbox.moe/ny55yv.jpg",
+                    body: `${getGreeting()}*`,
+                    thumbnailUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
                     sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
                     mediaType: 1,
                     renderSmallThumbnail: true
