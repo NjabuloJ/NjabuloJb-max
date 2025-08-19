@@ -7,7 +7,7 @@ cmd({
     pattern: "menu",
     desc: "Show interactive menu system",
     category: "menu",
-    react: "🧾",
+    react: "💬",
     filename: __filename
 }, async (conn, mek, m, { from, reply }) => {
     try {
@@ -56,7 +56,7 @@ cmd({
         const sentMsg = await conn.sendMessage(
             from,
             {
-                image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/0ikqoy.jpg' },
+                image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/173jef.jpeg' },
                 caption: menuCaption,
                 contextInfo: contextInfo
           }, { quoted: {
@@ -67,7 +67,6 @@ cmd({
             },
             message: {
                 contactMessage: {
-                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
@@ -86,7 +85,6 @@ cmd({
             },
             message: {
                 contactMessage: {
-                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
@@ -423,7 +421,6 @@ cmd({
                       },
             message: {
       contactMessage: {
-                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
                      }
                    }
