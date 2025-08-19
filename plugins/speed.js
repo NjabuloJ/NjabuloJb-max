@@ -35,23 +35,22 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
         const text = ` *ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴘᴏɴɢ🏓: ${responseTime.toFixed(2)}ms*`;
 
         await conn.sendMessage(from, {
-            text,
-            contextInfo: {
-          mentionedJid: [sender],
-          forwardingScore: 999,
-          isForwarded: true,
-             forwardedNewsletterMessageInfo: {
-             newsletterJid: '120363399999197102@newsletter',
-             newsletterName: "╭••➤®Njabulo Jb",
-            serverMessageId: 143
-              },
-               forwardingScore: 999, // Score to indicate it has been forwarded
-               externalAdReply: {
-               title: "bot is alwaysonline",
-               body: "online",
-              thumbnailUrl:  "https://files.catbox.moe/bw9rme.jpg";
-              mediaType: 1,
-              renderSmallThumbnail: true // Small thumbnail rendering
+           text: text,
+           contextInfo: {
+              isForwarded: true,
+               forwardedNewsletterMessageInfo: {
+                 newsletterJid: '120363399999197102@newsletter',
+                   newsletterName: '╭••➤®Njabulo Jb',
+                   serverMessageId: 143
+                    },
+                   forwardingScore: 999,
+                    externalAdReply: {
+                      title: "╭••➤®Njabulo Jb",
+                       body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴘᴀɪʀ ᴄᴏᴅᴇ ғᴏʀ ᴡʜᴀᴛsᴀᴘᴘ ʟɪɴᴋᴇᴅ ᴅᴇᴠɪᴄᴇ ᴡᴏʀᴋ ᴏɴ ᴏʟʟ ᴅᴇᴘʟᴏʏɪɴɢ ᴍᴇɴᴛ",
+                      thumbnailUrl: "https://files.catbox.moe/ny55yv.jpg",
+                       sourceUrl: "https://files.catbox.moe/ny55yv.jpg",
+                       mediaType: 1,
+                 renderLargerThumbnail: true
                 }
             }
         }, { quoted: {
