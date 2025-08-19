@@ -33,49 +33,14 @@ cmd({
 *╰─────────────────⊷*`;
 
     // Create interactive buttons
-    const buttons = [
-      {
-        buttonId: "action",
-        buttonText: { displayText: "📂 ᴍᴇɴᴜ ᴏᴘᴛɪᴏɴꜱ" },
-        type: 4,
-        nativeFlowInfo: {
-          name: "single_select",
-          paramsJson: JSON.stringify({
-            title: "📂 ᴄʟɪᴄᴋ ʜᴇʀᴇ",
-            sections: [
-              {
-                title: "📁 ᴍᴇʀᴄᴇᴅᴇs",
-                highlight_label: "",
-                rows: [
-                  {
-                    title: "📂 ᴍᴇɴᴜ",
-                    description: "ᴏᴘᴇɴ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ",
-                    id: `${prefix}menu`,
-                  },
-                  {
-                    title: "👑 ᴏᴡɴᴇʀ",
-                    description: "ᴄᴏɴᴛᴀᴄᴛ ʙᴏᴛ ᴏᴡɴᴇʀ",
-                    id: `${prefix}owner`,
-                  },
-                  {
-                    title: "📶 ᴘɪɴɢ",
-                    description: "ᴛᴇꜱᴛ ʙᴏᴛ ꜱᴘᴇᴇᴅ",
-                    id: `${prefix}ping`,
-                  },
-                  {
-                    title: "🖥️ ꜱʏꜱᴛᴇᴍ",
-                    description: "ꜱʏꜱᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ",
-                    id: `${prefix}system`,
-                  },
-                  {
-                    title: "🛠️ ʀᴇᴘᴏ",
-                    description: "ɢɪᴛʜᴜʙ ʀᴇᴘᴏꜱɪᴛᴏʀʏ",
-                    id: `${prefix}repo`,
-                  },
-                ],
-              },
-            ],
-          }),
+    const Buttons = [
+            { buttonId: "download_menu", buttonText: { displayText: "📥 ᴅᴏᴡɴʟᴏᴀᴅ" }, type: 1 },
+            { buttonId: "group_menu", buttonText: { displayText: "👥 ɢʀᴏᴜᴘ" }, type: 1 },
+            { buttonId: "fun_menu", buttonText: { displayText: "🎮 ғᴜɴ" }, type: 1 },
+            { buttonId: "owner_menu", buttonText: { displayText: "👑 ᴏᴡɴᴇʀ" }, type: 1 },
+            { buttonId: "ai_menu", buttonText: { displayText: "🤖 ᴀɪ" }, type: 1 },
+            { buttonId: "anime_menu", buttonText: { displayText: "🍥 ᴀɴɪᴍᴇ" }, type: 1 }
+          ];    }),
         },
       },
     ];
