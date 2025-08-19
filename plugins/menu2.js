@@ -35,17 +35,52 @@ cmd({
     // Create interactive buttons
     const buttons = [
       {
-        buttonId: "menu_action",
-        buttonText: { displayText: "📂 ᴄᴀᴛᴇɢᴏʀɪᴇs" },
-        type: 1 // Use type 1 for simple buttons
+        buttonId: "action",
+        buttonText: { displayText: "📂 ᴍᴇɴᴜ ᴏᴘᴛɪᴏɴꜱ" },
+        type: 4,
+        nativeFlowInfo: {
+          name: "single_select",
+          paramsJson: JSON.stringify({
+            title: "📂 ᴄʟɪᴄᴋ ʜᴇʀᴇ",
+            sections: [
+              {
+                title: "📁 ᴍᴇʀᴄᴇᴅᴇs",
+                highlight_label: "",
+                rows: [
+                  {
+                    title: "📂 ᴍᴇɴᴜ",
+                    description: "ᴏᴘᴇɴ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ",
+                    id: `${prefix}menu`,
+                  },
+                  {
+                    title: "👑 ᴏᴡɴᴇʀ",
+                    description: "ᴄᴏɴᴛᴀᴄᴛ ʙᴏᴛ ᴏᴡɴᴇʀ",
+                    id: `${prefix}owner`,
+                  },
+                  {
+                    title: "📶 ᴘɪɴɢ",
+                    description: "ᴛᴇꜱᴛ ʙᴏᴛ ꜱᴘᴇᴇᴅ",
+                    id: `${prefix}ping`,
+                  },
+                  {
+                    title: "🖥️ ꜱʏꜱᴛᴇᴍ",
+                    description: "ꜱʏꜱᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ",
+                    id: `${prefix}system`,
+                  },
+                  {
+                    title: "🛠️ ʀᴇᴘᴏ",
+                    description: "ɢɪᴛʜᴜʙ ʀᴇᴘᴏꜱɪᴛᴏʀʏ",
+                    id: `${prefix}repo`,
+                  },
+                ],
+              },
+            ],
+          }),
+        },
       },
-      {
-        buttonId: "owner_info",
-        buttonText: { displayText: "👑 ᴏᴡɴᴇʀ" },
-        type: 1
-      }
     ];
 
+    
     // Send the initial menu message
     const sentMsg = await conn.sendMessage(from, {
       image: { url: 'https://files.catbox.moe/roubzi.jpg' },
