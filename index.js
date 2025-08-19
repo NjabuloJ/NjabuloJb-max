@@ -125,9 +125,38 @@ const port = process.env.PORT || 9090;
 ┏──────────────⊷
 ┊ *[ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ʟɪɴᴋᴇᴅ ᴅᴇᴠɪᴄᴇ]*
 ┗──────────────⊷`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/0ikqoy.jpg` },caption: up })
-   }
-  })
+    conn.sendMessage(conn.user.id, { 
+		image: { url: `https://files.catbox.moe/0ikqoy.jpg` },
+		caption: up,
+		     contextInfo: {
+              isForwarded: true,
+               forwardedNewsletterMessageInfo: {
+                 newsletterJid: '120363399999197102@newsletter',
+                   newsletterName: '╭••➤®Njabulo Jb',
+                   serverMessageId: 143
+               },
+                forwardingScore: 999,
+                externalAdReply: {
+                    title: "🖥️ᴛᴇꜱᴛ ʙᴏᴛ ᴀʟɪᴠᴇ ᴜᴩᴛɪᴍᴇ",
+                    body: "📡ꜱʏꜱᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ",
+                    thumbnailUrl: "https://files.catbox.moe/173jef.jpeg",
+                    sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
+                    mediaType: 1,
+                    renderSmallThumbnail: true
+                }
+            }
+        }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
   conn.ev.on('creds.update', saveCreds)
 
   //==============================
