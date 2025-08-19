@@ -421,7 +421,7 @@ cmd({
                         senderID,
                         {
                             image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/173jef.jpeg' },
-                            text: selectedMenu.content,
+                            caption: selectedMenu.content,
                             contextInfo: contextInfo
                         }, { quoted: {
                        key: {
