@@ -157,6 +157,7 @@ const port = process.env.PORT || 9090;
                 }
             }
         } });
+  }
   conn.ev.on('creds.update', saveCreds)
 
   //==============================
