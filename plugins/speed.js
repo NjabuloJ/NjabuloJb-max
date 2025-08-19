@@ -45,8 +45,8 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
                },
                 forwardingScore: 999,
                 externalAdReply: {
-                    title: "Pong run📡",
-                    body: "bot",
+                    title: "🖥️ᴛᴇꜱᴛ ʙᴏᴛ ꜱᴘᴇᴇᴅ",
+                    body: "🏓ꜱʏꜱᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ",
                     thumbnailUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
                     sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
                     mediaType: 1,
@@ -61,7 +61,7 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
             },
             message: {
                 contactMessage: {
-                    displayName: "✆︎NנɐႦυℓσ ",
+                    
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
