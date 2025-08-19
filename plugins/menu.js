@@ -50,6 +50,15 @@ cmd({
                 newsletterJid: '120363399999197102@newsletter',
                 newsletterName: '╭••➤®Njabulo Jb',
                 serverMessageId: 143
+              },
+                forwardingScore: 999,
+                externalAdReply: {
+                    title: "🖥️ᴛᴇꜱᴛ ʙᴏᴛ ᴀʟɪᴠᴇ ᴜᴩᴛɪᴍᴇ",
+                    body: "📡ꜱʏꜱᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ",
+                    thumbnailUrl: "https://files.catbox.moe/173jef.jpeg",
+                    sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
+                    mediaType: 1,
+                    renderSmallThumbnail: true
             }
         };
 
