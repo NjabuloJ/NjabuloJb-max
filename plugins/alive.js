@@ -14,7 +14,7 @@ cmd({
 async (conn, mek, m, { from, sender, reply }) => {
     try {
         const status = `
-*Uptime:* ${runtime(process.uptime())}`;
+*ᴀʟɪᴠᴇ ᴜᴩᴛɪᴍᴇ: (${runtime(process.uptime())})*`;
 
         await conn.sendMessage(from, {
           text: status,
@@ -27,9 +27,9 @@ async (conn, mek, m, { from, sender, reply }) => {
                },
                 forwardingScore: 999,
                 externalAdReply: {
-                    title: "🖥️ᴛᴇꜱᴛ ʙᴏᴛ ꜱᴘᴇᴇᴅ",
-                    body: "🏓ꜱʏꜱᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ",
-                    thumbnailUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
+                    title: "🖥️ᴛᴇꜱᴛ ʙᴏᴛ ᴀʟɪᴠᴇ ᴜᴩᴛɪᴍᴇ",
+                    body: "📡ꜱʏꜱᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ",
+                    thumbnailUrl: "https://files.catbox.moe/173jef.jpeg",
                     sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
                     mediaType: 1,
                     renderSmallThumbnail: true
@@ -43,7 +43,6 @@ async (conn, mek, m, { from, sender, reply }) => {
             },
             message: {
                 contactMessage: {
-                    displayName: "✆︎NנɐႦυℓσ נႦ verified",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=254700000000:+254 700 000000\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
