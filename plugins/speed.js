@@ -11,13 +11,7 @@ cmd({
 },
 async (conn, mek, m, { from, quoted, sender, reply, }) => {
     try {
-        
-  const getGreeting = () => {
-      const h = new Date().getTime();
-      if (h >= 5 && h < 12) return "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 🌅";
-      if (h >= 12 && h < 18) return "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌞";
-      return "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌚";
-    };
+    const start = new Date().getTime();
 
         const reactionEmojis = ['🔥', '⚡', '🚀', '💨', '🎯', '🎉', '🌟', '💥', '🕐', '🔹'];
         const textEmojis = ['💎', '🏆', '⚡️', '🚀', '🎶', '🌠', '🌀', '🔱', '🛡️', '✨'];
@@ -36,7 +30,7 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
         });
 
         const end = new Date().getTime();
-        const responseTime = (end - h) / 1000;
+        const responseTime = (end - start) / 1000;
 
         const text = ` *ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴘᴏɴɢ🏓: ${responseTime.toFixed(2)}ms*`;
 
@@ -51,8 +45,8 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
                },
                 forwardingScore: 999,
                 externalAdReply: {
-                    title: "vw golf",
-                    body: `${getGreeting()}*`,
+                    title: "Pong run📡",
+                    body: "bot",
                     thumbnailUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
                     sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
                     mediaType: 1,
