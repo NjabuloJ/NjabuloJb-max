@@ -13,9 +13,9 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
     try {
         
   const getGreeting = () => {
-      const start = new Date().getTime();
-      if (start >= 5 && start < 12) return "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 🌅";
-      if (start >= 12 && start < 18) return "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌞";
+      const h = new Date().getTime();
+      if (h >= 5 && h < 12) return "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 🌅";
+      if (h >= 12 && h < 18) return "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌞";
       return "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌚";
     };
 
@@ -36,7 +36,7 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
         });
 
         const end = new Date().getTime();
-        const responseTime = (end - start) / 1000;
+        const responseTime = (end - h) / 1000;
 
         const text = ` *ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴘᴏɴɢ🏓: ${responseTime.toFixed(2)}ms*`;
 
