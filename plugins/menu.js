@@ -53,7 +53,7 @@ cmd({
               },
                 forwardingScore: 999,
                 externalAdReply: {
-                    title: "🖥️ᴛᴇꜱᴛ ʙᴏᴛ ᴀʟɪᴠᴇ ᴜᴩᴛɪᴍᴇ",
+                    title: "🖥️ᴡᴏʀᴅ ᴡʜᴀᴛꜱᴀᴩᴩ ᴍᴇꜱꜱᴀɢᴇ ᴏɴʟɪɴᴇ",
                     body: "📡ꜱʏꜱᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ",
                     thumbnailUrl: "https://files.catbox.moe/173jef.jpeg",
                     sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
