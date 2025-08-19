@@ -50,7 +50,7 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
                     thumbnailUrl: "https://files.catbox.moe/ny55yv.jpg",
                     sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
                     mediaType: 1,
-                    renderLargerThumbnail: true
+                    renderSmallThumbnail: true
                 }
             }
         }, { quoted: {
