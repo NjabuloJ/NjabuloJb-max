@@ -14,8 +14,8 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
         
   const getGreeting = () => {
       const start = new Date().getTime();
-      if (start >= 5 && h < 12) return "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 🌅";
-      if (start >= 12 && h < 18) return "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌞";
+      if (start >= 5 && start < 12) return "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 🌅";
+      if (start >= 12 && start < 18) return "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌞";
       return "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌚";
     };
 
