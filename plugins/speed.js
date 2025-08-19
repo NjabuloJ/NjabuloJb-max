@@ -42,15 +42,15 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
                  newsletterJid: '120363399999197102@newsletter',
                    newsletterName: '╭••➤®Njabulo Jb',
                    serverMessageId: 143
-                    },
-                   forwardingScore: 999,
-                    externalAdReply: {
-                      title: "╭••➤®Njabulo Jb",
-                       body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴘᴀɪʀ ᴄᴏᴅᴇ ғᴏʀ ᴡʜᴀᴛsᴀᴘᴘ ʟɪɴᴋᴇᴅ ᴅᴇᴠɪᴄᴇ ᴡᴏʀᴋ ᴏɴ ᴏʟʟ ᴅᴇᴘʟᴏʏɪɴɢ ᴍᴇɴᴛ",
-                      thumbnailUrl: "https://files.catbox.moe/ny55yv.jpg",
-                       sourceUrl: "https://files.catbox.moe/ny55yv.jpg",
-                       mediaType: 1,
-                 renderLargerThumbnail: true
+               },
+                forwardingScore: 999,
+                externalAdReply: {
+                    title: "vw golf",
+                    body: "Command List",
+                    thumbnailUrl: "https://files.catbox.moe/ny55yv.jpg",
+                    sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
+                    mediaType: 1,
+                    renderLargerThumbnail: true
                 }
             }
         }, { quoted: {
