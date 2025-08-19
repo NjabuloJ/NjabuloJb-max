@@ -130,7 +130,6 @@ cmd({
 *⏰ Time*: 
 *⚙️ Prefix*: [.]
 *🌐 Mode*: [public]
-> > *✆︎Pσɯҽɾҽԃ Ⴆყ NנɐႦυℓσ נႦ*
 > ${config.DESCRIPTION}`
             },
             '2': {
@@ -217,12 +216,6 @@ cmd({
 ┃ • fullpp [img]
 ┃ • setpp [img]
 ┃ • restart
-┃ • shutdown
-┃ • updatecmd
-┃ • gjid
-┃ • jid @user
-┃ • listcmd
-┃ • allmenu
 ┗──────────────⊷
 > ${config.DESCRIPTION}`
             },
