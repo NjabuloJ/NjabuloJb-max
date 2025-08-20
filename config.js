@@ -23,8 +23,6 @@ ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
 ANTI_LINK: process.env.ANTI_LINK || "false",
 // make anti link true,false for groups 
 MENTION_REPLY: process.env.MENTION_REPLY || "false",
-// make auto boi
-AUTO_BIO: process.env.AUTO_BIO || "on",
 // make true if want auto voice reply if someone menetion you 
 MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/0mmreh.jpg",
 // add custom menu and mention reply image url
